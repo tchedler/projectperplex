@@ -1,0 +1,4768 @@
+{
+  "_SYSTEM": {
+    "bot_is_running": true,
+    "last_heartbeat": "2026-03-06 03:09:31",
+    "active_symbols": [
+      "XAUUSD"
+    ]
+  },
+  "XAUUSD": {
+    "timeframes": {
+      "D1": {
+        "last_updated": "2026-03-05T18:01:56.549850",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": true,
+              "power_ratio": 2.64,
+              "velocity": "EXTREME"
+            },
+            "is_displaced": true,
+            "displacement_score": 2.64,
+            "structure": {
+              "mode": "CONSOLIDATION",
+              "choch": "NONE",
+              "swh": 5419.26,
+              "swl": 4995.97,
+              "prev_swh": 5249.76,
+              "prev_swl": 4841.48,
+              "ext_swh": 5598.03,
+              "ext_swl": 3311.55
+            },
+            "fvgs": [
+              {
+                "type": "IFVG_SIBI",
+                "top": 4772.34,
+                "bot": 4766.23,
+                "ce": 4769.285,
+                "index": "2026-01-21T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 63.8,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 4899.74,
+                "bot": 4888.43,
+                "ce": 4894.085,
+                "index": "2026-01-22T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 69.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 4989.86,
+                "bot": 4940.63,
+                "ce": 4965.245,
+                "index": "2026-01-23T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 72.3,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5010.27,
+                "bot": 4990.02,
+                "ce": 5000.145,
+                "index": "2026-01-26T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 73.9,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5157.31,
+                "bot": 5111.03,
+                "ce": 5134.17,
+                "index": "2026-01-27T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 79.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5098.23,
+                "bot": 4884.64,
+                "ce": 4991.4349999999995,
+                "index": "2026-01-30T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 73.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 4987.68,
+                "bot": 4971.48,
+                "ce": 4979.58,
+                "index": "2026-02-09T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 73.0,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5260.77,
+                "bot": 5205.65,
+                "ce": 5233.21,
+                "index": "2026-02-27T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 84.0,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 4772.34,
+                  "bot": 4766.23,
+                  "ce": 4769.285,
+                  "index": "2026-01-21T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 63.8,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 4899.74,
+                  "bot": 4888.43,
+                  "ce": 4894.085,
+                  "index": "2026-01-22T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 69.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 4989.86,
+                  "bot": 4940.63,
+                  "ce": 4965.245,
+                  "index": "2026-01-23T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 72.3,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5010.27,
+                  "bot": 4990.02,
+                  "ce": 5000.145,
+                  "index": "2026-01-26T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 73.9,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5157.31,
+                  "bot": 5111.03,
+                  "ce": 5134.17,
+                  "index": "2026-01-27T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 79.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5098.23,
+                  "bot": 4884.64,
+                  "ce": 4991.4349999999995,
+                  "index": "2026-01-30T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 73.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 4987.68,
+                  "bot": 4971.48,
+                  "ce": 4979.58,
+                  "index": "2026-02-09T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 73.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5260.77,
+                  "bot": 5205.65,
+                  "ce": 5233.21,
+                  "index": "2026-02-27T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 84.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 5233.455,
+                  "zone": [
+                    5206.14,
+                    5260.77
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 5233.455,
+                  "zone": [
+                    5206.14,
+                    5260.77
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BULLISH_OB",
+                "level": 5058.07,
+                "index": "2026-02-10T00:00:00",
+                "refined_zone": [
+                  4987.68,
+                  5078.72
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              },
+              {
+                "type": "BEARISH_OB",
+                "level": 5025.16,
+                "index": "2026-02-11T00:00:00",
+                "refined_zone": [
+                  5018.88,
+                  5119.13
+                ],
+                "candle_count": 1,
+                "quality_score": 2,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 0,
+              "bull_wick_ce": 4530.370000000001
+            },
+            "protected_levels": {
+              "low": {
+                "price": 4402.14,
+                "status": "TARGET"
+              },
+              "high": {
+                "price": 5450.96,
+                "status": "TARGET"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BULL",
+                "top": 4995.35,
+                "bot": 4993.26,
+                "ce": 4994.305,
+                "index": "2026-02-17T00:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 4877.91,
+                "bot": 4877.89,
+                "ce": 4877.9,
+                "index": "2026-02-18T00:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5109.54,
+                "bot": 5107.13,
+                "ce": 5108.335,
+                "index": "2026-02-23T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5190.85,
+                "bot": 5176.31,
+                "ce": 5183.58,
+                "index": "2026-02-27T00:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5363.14,
+                "bot": 5278.77,
+                "ce": 5320.955,
+                "index": "2026-03-02T00:00:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": true,
+              "bullish_sweep": true,
+              "bearish_sweep": true,
+              "pdh": 5206.14,
+              "pdl": 5084.39
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 5105.535,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 4404.935,
+                "quality": "SMOOTH",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5598.03,
+              "low": 3886.62,
+              "high_swept": true,
+              "low_swept": false,
+              "high_status": "SWEPT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 4979.58,
+                "type": "BISI"
+              },
+              {
+                "price": 5062.455,
+                "type": "BISI"
+              },
+              {
+                "price": 5233.21,
+                "type": "BISI"
+              },
+              {
+                "price": 5233.455,
+                "type": "SIBI"
+              }
+            ],
+            "ndog": 5140.17,
+            "nwog": 5363.14,
+            "temporal_levels": {
+              "PDH": {
+                "price": 5206.14,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PDL": {
+                "price": 5084.39,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PWH": {
+                "price": 4381.53,
+                "status": "INTACT",
+                "side": "BELOW"
+              },
+              "PWL": {
+                "price": 3627.78,
+                "status": "INTACT",
+                "side": "BELOW"
+              }
+            },
+            "dol_bull": {
+              "name": "N/A",
+              "price": 5598.03,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "SSL MIN",
+              "price": 3886.62,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5598.03,
+                "label": "LRLR ✅ vers 5598.03 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 3886.62,
+                "label": "LRLR ✅ vers 3886.62 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5419.26,
+              "cbdr_low": 4853.99,
+              "cbdr_range_pips": 565.3,
+              "cbdr_explosive": false,
+              "flout_high": 5419.26,
+              "flout_low": 4841.48,
+              "projections_bull": {
+                "sd_1_0": 5984.53,
+                "sd_2_0": 6549.8,
+                "sd_2_5": 6832.435,
+                "sd_3_5": 7397.705
+              },
+              "projections_bear": {
+                "sd_1_0": 4288.72,
+                "sd_2_0": 3723.45,
+                "sd_2_5": 3440.815,
+                "sd_3_5": 2875.545
+              }
+            },
+            "proximal_liquidity": 5105.535
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 5258.4098,
+              "lvl_705": 5294.389450000001,
+              "lvl_79": 5330.3691
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BULLISH_OB",
+                "price": 5058.07,
+                "power": 3.5,
+                "dist": 21.0600000000004
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5025.16,
+                "power": 3.0,
+                "dist": 53.970000000000255
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5134.17,
+                "power": 2,
+                "dist": 55.039999999999964
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5000.145,
+                "power": 2,
+                "dist": 78.98499999999967
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 4991.4349999999995,
+                "power": 2,
+                "dist": 87.69500000000062
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 4979.58,
+                "power": 2,
+                "dist": 99.55000000000018
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 4965.245,
+                "power": 2,
+                "dist": 113.88500000000022
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5233.21,
+                "power": 2,
+                "dist": 154.07999999999993
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 4894.085,
+                "power": 2,
+                "dist": 185.04500000000007
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 4769.285,
+                "power": 2,
+                "dist": 309.84500000000025
+              },
+              {
+                "type": "REJECTION_BULL",
+                "price": 4530.370000000001,
+                "power": 2,
+                "dist": 548.7599999999993
+              }
+            ],
+            "projections": {
+              "target_1_0": 4572.68,
+              "target_2_0": 4149.39,
+              "target_2_5": 3937.7450000000003,
+              "target_3_5": 3514.4550000000004
+            },
+            "equilibrium": {
+              "mid": 5207.615,
+              "zone": "DEEP_DISCOUNT",
+              "percent": 19.646105506862874
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5140.17,
+            "po3_phase": "CONSOLIDATION",
+            "turtle_soup": "NONE",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "CONSOLIDATION_RANGE"
+          },
+          "smt": null,
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      },
+      "H4": {
+        "last_updated": "2026-03-05T18:01:56.837904",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": false,
+              "power_ratio": 1.09,
+              "velocity": "NORMAL"
+            },
+            "is_displaced": false,
+            "displacement_score": 1.09,
+            "structure": {
+              "mode": "BOS_BEAR",
+              "choch": "NONE",
+              "swh": 5195.01,
+              "swl": 5108.83,
+              "prev_swh": 5206.14,
+              "prev_swl": 4995.97,
+              "ext_swh": 5450.96,
+              "ext_swl": 4402.14
+            },
+            "fvgs": [
+              {
+                "type": "BISI",
+                "top": 5302.81,
+                "bot": 5257.98,
+                "ce": 5280.395,
+                "index": "2026-02-27T20:00:00",
+                "mitigated": true,
+                "quality": "USED",
+                "position_quality": "LOW",
+                "position_pct": 83.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "BISI",
+                "top": 5148.4,
+                "bot": 5146.78,
+                "ce": 5147.59,
+                "index": "2026-03-05T00:00:00",
+                "mitigated": true,
+                "quality": "USED",
+                "position_quality": "LOW",
+                "position_pct": 71.1,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5013.69,
+                "bot": 4970.74,
+                "ce": 4992.215,
+                "index": "2026-02-04T16:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 56.3,
+                "is_first_fvg": true,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 4800.53,
+                "bot": 4793.76,
+                "ce": 4797.145,
+                "index": "2026-02-05T20:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 37.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 4993.35,
+                "bot": 4988.89,
+                "ce": 4991.120000000001,
+                "index": "2026-02-19T04:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 56.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5201.13,
+                "bot": 5165.52,
+                "ce": 5183.325000000001,
+                "index": "2026-02-23T16:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 74.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5302.81,
+                "bot": 5257.98,
+                "ce": 5280.395,
+                "index": "2026-02-27T20:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 83.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5148.4,
+                "bot": 5146.78,
+                "ce": 5147.59,
+                "index": "2026-03-05T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 71.1,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "BISI",
+                  "top": 5302.81,
+                  "bot": 5257.98,
+                  "ce": 5280.395,
+                  "index": "2026-02-27T20:00:00",
+                  "mitigated": true,
+                  "quality": "USED",
+                  "position_quality": "LOW",
+                  "position_pct": 83.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "BISI",
+                  "top": 5148.4,
+                  "bot": 5146.78,
+                  "ce": 5147.59,
+                  "index": "2026-03-05T00:00:00",
+                  "mitigated": true,
+                  "quality": "USED",
+                  "position_quality": "LOW",
+                  "position_pct": 71.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5013.69,
+                  "bot": 4970.74,
+                  "ce": 4992.215,
+                  "index": "2026-02-04T16:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 56.3,
+                  "is_first_fvg": true,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 4800.53,
+                  "bot": 4793.76,
+                  "ce": 4797.145,
+                  "index": "2026-02-05T20:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 37.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 4993.35,
+                  "bot": 4988.89,
+                  "ce": 4991.120000000001,
+                  "index": "2026-02-19T04:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 56.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5201.13,
+                  "bot": 5165.52,
+                  "ce": 5183.325000000001,
+                  "index": "2026-02-23T16:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 74.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5302.81,
+                  "bot": 5257.98,
+                  "ce": 5280.395,
+                  "index": "2026-02-27T20:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 83.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5148.4,
+                  "bot": 5146.78,
+                  "ce": 5147.59,
+                  "index": "2026-03-05T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 71.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 4971.855,
+                  "zone": [
+                    4970.74,
+                    4972.97
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 4991.120000000001,
+                  "zone": [
+                    4988.89,
+                    4993.35
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BEARISH_OB",
+                "level": 5392.18,
+                "index": "2026-03-02T04:00:00",
+                "refined_zone": [
+                  5316.79,
+                  5419.26
+                ],
+                "candle_count": 3,
+                "quality_score": 4,
+                "in_killzone": true
+              },
+              {
+                "type": "BEARISH_OB",
+                "level": 5321.06,
+                "index": "2026-03-02T20:00:00",
+                "refined_zone": [
+                  5289.61,
+                  5379.88
+                ],
+                "candle_count": 2,
+                "quality_score": 4,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 5141.12,
+                "index": "2026-03-04T12:00:00",
+                "refined_zone": [
+                  5108.83,
+                  5206.14
+                ],
+                "candle_count": 3,
+                "quality_score": 3,
+                "in_killzone": true
+              },
+              {
+                "type": "BEARISH_OB",
+                "level": 5148.62,
+                "index": "2026-03-05T08:00:00",
+                "refined_zone": [
+                  5120.65,
+                  5180.61
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 0,
+              "bull_wick_ce": 0
+            },
+            "protected_levels": {
+              "low": {
+                "price": 4995.97,
+                "status": "TARGET"
+              },
+              "high": {
+                "price": 5419.26,
+                "status": "PROTECTED"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BULL",
+                "top": 5306.91,
+                "bot": 5306.86,
+                "ce": 5306.885,
+                "index": "2026-03-02T20:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5319.19,
+                "bot": 5319.17,
+                "ce": 5319.18,
+                "index": "2026-03-03T08:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5140.17,
+                "bot": 5140.02,
+                "ce": 5140.095,
+                "index": "2026-03-05T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5172.73,
+                "bot": 5172.69,
+                "ce": 5172.709999999999,
+                "index": "2026-03-05T04:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5161.03,
+                "bot": 5160.96,
+                "ce": 5160.995,
+                "index": "2026-03-05T12:00:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": true,
+              "bullish_sweep": true,
+              "bearish_sweep": true,
+              "pdh": 5206.14,
+              "pdl": 5084.39
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 5185.91,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5200.575,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5202.885,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5208.45,
+                "quality": "SMOOTH",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 4992.685,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5101.485,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5138.495,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5419.26,
+              "low": 4841.48,
+              "high_swept": true,
+              "low_swept": false,
+              "high_status": "SWEPT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 5360.9400000000005,
+                "type": "SIBI"
+              },
+              {
+                "price": 5296.77,
+                "type": "SIBI"
+              },
+              {
+                "price": 5200.945,
+                "type": "SIBI"
+              },
+              {
+                "price": 5151.525,
+                "type": "SIBI"
+              },
+              {
+                "price": 5147.59,
+                "type": "BISI"
+              }
+            ],
+            "ndog": 5140.17,
+            "nwog": 5306.91,
+            "temporal_levels": {
+              "PDH": {
+                "price": 5206.14,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PDL": {
+                "price": 5084.39,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PWH": {
+                "price": 5119.13,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PWL": {
+                "price": 4655.27,
+                "status": "INTACT",
+                "side": "BELOW"
+              }
+            },
+            "dol_bull": {
+              "name": "N/A",
+              "price": 5419.26,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "EQL (SMOOTH)",
+              "price": 4992.685,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5419.26,
+                "label": "LRLR ✅ vers 5419.26 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 4992.685,
+                "label": "LRLR ✅ vers 4992.685 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5393.5,
+              "cbdr_low": 5079.25,
+              "cbdr_range_pips": 314.2,
+              "cbdr_explosive": false,
+              "flout_high": 5393.5,
+              "flout_low": 5079.25,
+              "projections_bull": {
+                "sd_1_0": 5707.75,
+                "sd_2_0": 6022.0,
+                "sd_2_5": 6179.125,
+                "sd_3_5": 6493.375
+              },
+              "projections_bear": {
+                "sd_1_0": 4765.0,
+                "sd_2_0": 4450.75,
+                "sd_2_5": 4293.625,
+                "sd_3_5": 3979.375
+              }
+            },
+            "proximal_liquidity": 5101.485
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 5162.2616,
+              "lvl_705": 5169.5869,
+              "lvl_79": 5176.9122
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BEARISH_OB",
+                "price": 5321.06,
+                "power": 4.0,
+                "dist": 241.66000000000076
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5392.18,
+                "power": 4.0,
+                "dist": 312.78000000000065
+              },
+              {
+                "type": "BULLISH_OB",
+                "price": 5141.12,
+                "power": 3.5,
+                "dist": 61.720000000000255
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5148.62,
+                "power": 3.5,
+                "dist": 69.22000000000025
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5147.59,
+                "power": 2,
+                "dist": 68.19000000000051
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 4992.215,
+                "power": 2,
+                "dist": 87.18499999999949
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 4991.120000000001,
+                "power": 2,
+                "dist": 88.27999999999884
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5183.325000000001,
+                "power": 2,
+                "dist": 103.92500000000109
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5280.395,
+                "power": 2,
+                "dist": 200.9950000000008
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 4797.145,
+                "power": 2,
+                "dist": 282.2549999999992
+              },
+              {
+                "type": "BISI",
+                "price": 5147.59,
+                "power": 1,
+                "dist": 68.19000000000051
+              },
+              {
+                "type": "BISI",
+                "price": 5280.395,
+                "power": 1,
+                "dist": 200.9950000000008
+              }
+            ],
+            "projections": {
+              "target_1_0": 5022.65,
+              "target_2_0": 4936.469999999999,
+              "target_2_5": 4893.379999999999,
+              "target_3_5": 4807.199999999999
+            },
+            "equilibrium": {
+              "mid": 5151.92,
+              "zone": "DEEP_DISCOUNT",
+              "percent": -34.14945462984473
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5140.17,
+            "po3_phase": "MANIPULATION_LOW_HUNT",
+            "turtle_soup": "NONE",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "TREND_FOLLOWING"
+          },
+          "smt": null,
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      },
+      "H1": {
+        "last_updated": "2026-03-05T18:01:57.538680",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": true,
+              "power_ratio": 3.95,
+              "velocity": "EXTREME"
+            },
+            "is_displaced": true,
+            "displacement_score": 3.95,
+            "structure": {
+              "mode": "MSS_BEAR",
+              "choch": "NONE",
+              "swh": 5171.53,
+              "swl": 5120.65,
+              "prev_swh": 5180.61,
+              "prev_swl": 5108.83,
+              "ext_swh": 5419.26,
+              "ext_swl": 4995.97
+            },
+            "fvgs": [
+              {
+                "type": "IFVG_SIBI",
+                "top": 5328.39,
+                "bot": 5316.7,
+                "ce": 5322.545,
+                "index": "2026-03-02T21:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 77.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5127.39,
+                "bot": 5097.01,
+                "ce": 5112.200000000001,
+                "index": "2026-03-03T16:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 27.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5138.65,
+                "bot": 5129.83,
+                "ce": 5134.24,
+                "index": "2026-03-04T02:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 32.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5153.9,
+                "bot": 5140.42,
+                "ce": 5147.16,
+                "index": "2026-03-04T03:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 35.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5187.74,
+                "bot": 5185.02,
+                "ce": 5186.38,
+                "index": "2026-03-04T12:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 45.0,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5167.48,
+                "bot": 5167.13,
+                "ce": 5167.305,
+                "index": "2026-03-04T16:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 40.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5159.5,
+                "bot": 5144.08,
+                "ce": 5151.79,
+                "index": "2026-03-05T01:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 36.8,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5167.56,
+                "bot": 5166.19,
+                "ce": 5166.875,
+                "index": "2026-03-05T02:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 40.4,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5328.39,
+                  "bot": 5316.7,
+                  "ce": 5322.545,
+                  "index": "2026-03-02T21:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 77.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5127.39,
+                  "bot": 5097.01,
+                  "ce": 5112.200000000001,
+                  "index": "2026-03-03T16:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 27.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5138.65,
+                  "bot": 5129.83,
+                  "ce": 5134.24,
+                  "index": "2026-03-04T02:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 32.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5153.9,
+                  "bot": 5140.42,
+                  "ce": 5147.16,
+                  "index": "2026-03-04T03:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 35.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5187.74,
+                  "bot": 5185.02,
+                  "ce": 5186.38,
+                  "index": "2026-03-04T12:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 45.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5167.48,
+                  "bot": 5167.13,
+                  "ce": 5167.305,
+                  "index": "2026-03-04T16:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 40.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5159.5,
+                  "bot": 5144.08,
+                  "ce": 5151.79,
+                  "index": "2026-03-05T01:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 36.8,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5167.56,
+                  "bot": 5166.19,
+                  "ce": 5166.875,
+                  "index": "2026-03-05T02:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 40.4,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 5147.16,
+                  "zone": [
+                    5140.42,
+                    5153.9
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 5151.79,
+                  "zone": [
+                    5144.08,
+                    5159.5
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [],
+            "rejections": {
+              "bear_wick_ce": 0,
+              "bull_wick_ce": 0
+            },
+            "protected_levels": {
+              "low": {
+                "price": 5054.36,
+                "status": "TARGET"
+              },
+              "high": {
+                "price": 5195.01,
+                "status": "PROTECTED"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BEAR",
+                "top": 5180.27,
+                "bot": 5180.26,
+                "ce": 5180.265,
+                "index": "2026-03-05T06:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5165.7,
+                "bot": 5165.68,
+                "ce": 5165.6900000000005,
+                "index": "2026-03-05T11:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5161.03,
+                "bot": 5160.96,
+                "ce": 5160.995,
+                "index": "2026-03-05T12:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5163.8,
+                "bot": 5163.79,
+                "ce": 5163.795,
+                "index": "2026-03-05T14:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5102.59,
+                "bot": 5102.56,
+                "ce": 5102.575000000001,
+                "index": "2026-03-05T18:00:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": true,
+              "bullish_sweep": true,
+              "bearish_sweep": false,
+              "pdh": 5206.14,
+              "pdl": 5084.39
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 5193.05,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 5121.52,
+                "quality": "SMOOTH",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5419.26,
+              "low": 4995.97,
+              "high_swept": false,
+              "low_swept": false,
+              "high_status": "INTACT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 5151.79,
+                "type": "BISI"
+              },
+              {
+                "price": 5166.875,
+                "type": "BISI"
+              },
+              {
+                "price": 5177.5650000000005,
+                "type": "SIBI"
+              },
+              {
+                "price": 5145.495000000001,
+                "type": "SIBI"
+              }
+            ],
+            "ndog": 5149.8,
+            "nwog": 5332.55,
+            "temporal_levels": {
+              "PDH": {
+                "price": 5206.14,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PDL": {
+                "price": 5084.39,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PWH": {
+                "price": 5419.26,
+                "status": "INTACT",
+                "side": "ABOVE"
+              },
+              "PWL": {
+                "price": 5130.65,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              }
+            },
+            "dol_bull": {
+              "name": "PWH",
+              "price": 5419.26,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "SSL MIN",
+              "price": 4995.97,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5419.26,
+                "label": "LRLR ✅ vers 5419.26 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 4995.97,
+                "label": "LRLR ✅ vers 4995.97 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5340.54,
+              "cbdr_low": 5065.32,
+              "cbdr_range_pips": 275.2,
+              "cbdr_explosive": false,
+              "flout_high": 5195.01,
+              "flout_low": 5079.25,
+              "projections_bull": {
+                "sd_1_0": 5615.76,
+                "sd_2_0": 5890.98,
+                "sd_2_5": 6028.59,
+                "sd_3_5": 6303.81
+              },
+              "projections_bear": {
+                "sd_1_0": 4790.1,
+                "sd_2_0": 4514.88,
+                "sd_2_5": 4377.27,
+                "sd_3_5": 4102.05
+              }
+            },
+            "proximal_liquidity": 5121.52
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 5152.1956,
+              "lvl_705": 5156.520399999999,
+              "lvl_79": 5160.8452
+            },
+            "pd_hierarchy": [
+              {
+                "type": "IFVG_BISI",
+                "price": 5112.200000000001,
+                "power": 2,
+                "dist": 33.08000000000084
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5134.24,
+                "power": 2,
+                "dist": 55.11999999999989
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5147.16,
+                "power": 2,
+                "dist": 68.03999999999996
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5151.79,
+                "power": 2,
+                "dist": 72.67000000000007
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5166.875,
+                "power": 2,
+                "dist": 87.75500000000011
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5167.305,
+                "power": 2,
+                "dist": 88.1850000000004
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5186.38,
+                "power": 2,
+                "dist": 107.26000000000022
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5322.545,
+                "power": 2,
+                "dist": 243.42500000000018
+              }
+            ],
+            "projections": {
+              "target_1_0": 5069.7699999999995,
+              "target_2_0": 5018.889999999999,
+              "target_2_5": 4993.449999999999,
+              "target_3_5": 4942.57
+            },
+            "equilibrium": {
+              "mid": 5146.09,
+              "zone": "DEEP_DISCOUNT",
+              "percent": -81.6234276729553
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5000.55,
+            "po3_phase": "DISTRIBUTION_ACTIVE",
+            "turtle_soup": "NONE",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "MMSM_EXPANSION_ACTIVE"
+          },
+          "smt": {
+            "smt_divergence": false,
+            "smt_type": "NONE",
+            "correlated_with": "XAGUSD",
+            "stronger_pair": "NONE",
+            "trade_direction": "NONE",
+            "status": "SMOOTH_CORRELATION",
+            "m_high": 5195.01,
+            "m_low": 5054.36,
+            "c_high": 84.695,
+            "c_low": 81.134
+          },
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      },
+      "M15": {
+        "last_updated": "2026-03-05T18:01:57.827845",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": true,
+              "power_ratio": 1.83,
+              "velocity": "ELEVATED"
+            },
+            "is_displaced": true,
+            "displacement_score": 1.83,
+            "structure": {
+              "mode": "CONSOLIDATION",
+              "choch": "NONE",
+              "swh": 5104.65,
+              "swl": 5054.36,
+              "prev_swh": 5171.53,
+              "prev_swl": 5060.45,
+              "ext_swh": 5206.14,
+              "ext_swl": 5054.36
+            },
+            "fvgs": [
+              {
+                "type": "IFVG_BISI",
+                "top": 5148.4,
+                "bot": 5143.92,
+                "ce": 5146.16,
+                "index": "2026-03-05T08:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 60.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5149.12,
+                "bot": 5143.92,
+                "ce": 5146.52,
+                "index": "2026-03-05T08:30:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 60.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5161.44,
+                "bot": 5156.75,
+                "ce": 5159.094999999999,
+                "index": "2026-03-05T08:45:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 69.0,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5158.99,
+                "bot": 5148.68,
+                "ce": 5153.835,
+                "index": "2026-03-05T10:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 65.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5161.28,
+                "bot": 5148.68,
+                "ce": 5154.98,
+                "index": "2026-03-05T10:30:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 66.3,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5167.09,
+                "bot": 5165.36,
+                "ce": 5166.225,
+                "index": "2026-03-05T11:30:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 73.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5161.59,
+                "bot": 5158.85,
+                "ce": 5160.22,
+                "index": "2026-03-05T12:45:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 69.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5074.26,
+                "bot": 5072.76,
+                "ce": 5073.51,
+                "index": "2026-03-05T18:15:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 12.6,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5148.4,
+                  "bot": 5143.92,
+                  "ce": 5146.16,
+                  "index": "2026-03-05T08:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 60.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5149.12,
+                  "bot": 5143.92,
+                  "ce": 5146.52,
+                  "index": "2026-03-05T08:30:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 60.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5161.44,
+                  "bot": 5156.75,
+                  "ce": 5159.094999999999,
+                  "index": "2026-03-05T08:45:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 69.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5158.99,
+                  "bot": 5148.68,
+                  "ce": 5153.835,
+                  "index": "2026-03-05T10:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 65.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5161.28,
+                  "bot": 5148.68,
+                  "ce": 5154.98,
+                  "index": "2026-03-05T10:30:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 66.3,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5167.09,
+                  "bot": 5165.36,
+                  "ce": 5166.225,
+                  "index": "2026-03-05T11:30:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 73.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5161.59,
+                  "bot": 5158.85,
+                  "ce": 5160.22,
+                  "index": "2026-03-05T12:45:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 69.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5074.26,
+                  "bot": 5072.76,
+                  "ce": 5073.51,
+                  "index": "2026-03-05T18:15:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 12.6,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 5144.305,
+                  "zone": [
+                    5142.1,
+                    5146.51
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 5145.245,
+                  "zone": [
+                    5143.92,
+                    5146.57
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BEARISH_OB",
+                "level": 5162.53,
+                "index": "2026-03-05T14:30:00",
+                "refined_zone": [
+                  5160.93,
+                  5167.84
+                ],
+                "candle_count": 2,
+                "quality_score": 5,
+                "in_killzone": true
+              },
+              {
+                "type": "BEARISH_OB",
+                "level": 5112.95,
+                "index": "2026-03-05T16:15:00",
+                "refined_zone": [
+                  5102.93,
+                  5120.97
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              },
+              {
+                "type": "BEARISH_OB",
+                "level": 5097.53,
+                "index": "2026-03-05T16:45:00",
+                "refined_zone": [
+                  5091.43,
+                  5111.11
+                ],
+                "candle_count": 1,
+                "quality_score": 4,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 5086.52,
+                "index": "2026-03-05T17:30:00",
+                "refined_zone": [
+                  5077.78,
+                  5093.84
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 0,
+              "bull_wick_ce": 5059.11
+            },
+            "protected_levels": {
+              "low": {
+                "price": 5054.36,
+                "status": "TARGET"
+              },
+              "high": {
+                "price": 5171.53,
+                "status": "TARGET"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BEAR",
+                "top": 5120.35,
+                "bot": 5120.34,
+                "ce": 5120.345,
+                "index": "2026-03-05T16:30:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5097.53,
+                "bot": 5097.51,
+                "ce": 5097.52,
+                "index": "2026-03-05T16:45:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5085.41,
+                "bot": 5085.4,
+                "ce": 5085.405,
+                "index": "2026-03-05T17:15:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5102.59,
+                "bot": 5102.56,
+                "ce": 5102.575000000001,
+                "index": "2026-03-05T18:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5070.94,
+                "bot": 5070.93,
+                "ce": 5070.9349999999995,
+                "index": "2026-03-05T18:45:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": true,
+              "bullish_sweep": true,
+              "bearish_sweep": false,
+              "pdh": 5206.14,
+              "pdl": 5108.83
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 5169.775,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 5170.4,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 5172.155,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "eql": [],
+            "erl": {
+              "high": 5195.01,
+              "low": 5054.36,
+              "high_swept": false,
+              "low_swept": true,
+              "high_status": "INTACT",
+              "low_status": "SWEPT"
+            },
+            "irl": [
+              {
+                "price": 5160.55,
+                "type": "SIBI"
+              },
+              {
+                "price": 5142.29,
+                "type": "SIBI"
+              },
+              {
+                "price": 5073.51,
+                "type": "SIBI"
+              },
+              {
+                "price": 5073.4400000000005,
+                "type": "BISI"
+              }
+            ],
+            "ndog": 5164.6,
+            "nwog": 0,
+            "temporal_levels": {
+              "PDH": {
+                "price": 5206.14,
+                "status": "INTACT",
+                "side": "ABOVE"
+              },
+              "PDL": {
+                "price": 5084.39,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              },
+              "PWH": {
+                "price": 5206.14,
+                "status": "INTACT",
+                "side": "ABOVE"
+              },
+              "PWL": {
+                "price": 5108.83,
+                "status": "SWEPT",
+                "side": "ABOVE"
+              }
+            },
+            "dol_bull": {
+              "name": "EQH (SMOOTH)",
+              "price": 5172.155,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "N/A",
+              "price": 5054.36,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5172.155,
+                "label": "LRLR ✅ vers 5172.155 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5054.36,
+                "label": "LRLR ✅ vers 5054.36 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5146.78,
+              "cbdr_low": 5074.12,
+              "cbdr_range_pips": 72.7,
+              "cbdr_explosive": false,
+              "flout_high": 5195.01,
+              "flout_low": 5148.8,
+              "projections_bull": {
+                "sd_1_0": 5219.44,
+                "sd_2_0": 5292.1,
+                "sd_2_5": 5328.43,
+                "sd_3_5": 5401.09
+              },
+              "projections_bear": {
+                "sd_1_0": 5001.46,
+                "sd_2_0": 4928.8,
+                "sd_2_5": 4892.47,
+                "sd_3_5": 4819.81
+              }
+            },
+            "proximal_liquidity": 5054.36
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 5085.5398,
+              "lvl_705": 5089.81445,
+              "lvl_79": 5094.089099999999
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BEARISH_OB",
+                "price": 5162.53,
+                "power": 4.5,
+                "dist": 83.34999999999945
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5097.53,
+                "power": 4.0,
+                "dist": 18.349999999999454
+              },
+              {
+                "type": "BULLISH_OB",
+                "price": 5086.52,
+                "power": 3.5,
+                "dist": 7.3400000000001455
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5112.95,
+                "power": 3.5,
+                "dist": 33.76999999999953
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5073.51,
+                "power": 2,
+                "dist": 5.670000000000073
+              },
+              {
+                "type": "REJECTION_BULL",
+                "price": 5059.11,
+                "power": 2,
+                "dist": 20.07000000000062
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5146.16,
+                "power": 2,
+                "dist": 66.97999999999956
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5146.52,
+                "power": 2,
+                "dist": 67.34000000000015
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5153.835,
+                "power": 2,
+                "dist": 74.65499999999975
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5154.98,
+                "power": 2,
+                "dist": 75.79999999999927
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5159.094999999999,
+                "power": 2,
+                "dist": 79.91499999999905
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5160.22,
+                "power": 2,
+                "dist": 81.03999999999996
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5166.225,
+                "power": 2,
+                "dist": 87.04500000000007
+              }
+            ],
+            "projections": {
+              "target_1_0": 5004.07,
+              "target_2_0": 4953.78,
+              "target_2_5": 4928.635,
+              "target_3_5": 4878.344999999999
+            },
+            "equilibrium": {
+              "mid": 5079.504999999999,
+              "zone": "DISCOUNT",
+              "percent": 49.353748260092736
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5355.05,
+            "po3_phase": "CONSOLIDATION",
+            "turtle_soup": "BULLISH_TURTLE_SOUP",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "CONSOLIDATION_RANGE"
+          },
+          "smt": {
+            "smt_divergence": false,
+            "smt_type": "NONE",
+            "correlated_with": "XAGUSD",
+            "stronger_pair": "NONE",
+            "trade_direction": "NONE",
+            "status": "SMOOTH_CORRELATION",
+            "m_high": 5170.59,
+            "m_low": 5054.36,
+            "c_high": 84.695,
+            "c_low": 81.134
+          },
+          "checklist": {
+            "score": 90,
+            "verdict": "🚀 EXÉCUTION A+"
+          }
+        }
+      },
+      "M5": {
+        "last_updated": "2026-03-06T09:09:31.447777",
+        "data": {
+          "clock": {
+            "ny_time": "03:09",
+            "day": "VENDREDI",
+            "weekday_num": 4,
+            "killzone": "LONDON",
+            "silver_bullet": "LONDON_SB",
+            "macro": "NONE",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 189
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": false,
+              "power_ratio": 0.61,
+              "velocity": "NORMAL"
+            },
+            "is_displaced": false,
+            "displacement_score": 0.61,
+            "structure": {
+              "mode": "CONSOLIDATION",
+              "choch": "CHoCH_BULL_ALERT",
+              "swh": 5119.78,
+              "swl": 5107.72,
+              "prev_swh": 5122.94,
+              "prev_swl": 5105.86,
+              "ext_swh": 5143.94,
+              "ext_swl": 5055.78
+            },
+            "fvgs": [
+              {
+                "type": "IFVG_SIBI",
+                "top": 5079.66,
+                "bot": 5077.89,
+                "ce": 5078.775,
+                "index": "2026-03-05T23:50:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 26.1,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5095.14,
+                "bot": 5092.6,
+                "ce": 5093.870000000001,
+                "index": "2026-03-06T01:35:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 43.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5096.14,
+                "bot": 5096.0,
+                "ce": 5096.07,
+                "index": "2026-03-06T01:40:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 45.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5087.68,
+                "bot": 5084.2,
+                "ce": 5085.9400000000005,
+                "index": "2026-03-06T02:35:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 34.2,
+                "is_first_fvg": true,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5117.6,
+                "bot": 5109.47,
+                "ce": 5113.535,
+                "index": "2026-03-06T03:40:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 65.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5121.14,
+                "bot": 5120.39,
+                "ce": 5120.765,
+                "index": "2026-03-06T03:45:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 73.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5134.37,
+                "bot": 5121.37,
+                "ce": 5127.87,
+                "index": "2026-03-06T03:50:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 81.8,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5132.86,
+                "bot": 5130.71,
+                "ce": 5131.785,
+                "index": "2026-03-06T06:20:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 86.2,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5079.66,
+                  "bot": 5077.89,
+                  "ce": 5078.775,
+                  "index": "2026-03-05T23:50:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 26.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5095.14,
+                  "bot": 5092.6,
+                  "ce": 5093.870000000001,
+                  "index": "2026-03-06T01:35:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 43.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5096.14,
+                  "bot": 5096.0,
+                  "ce": 5096.07,
+                  "index": "2026-03-06T01:40:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 45.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5087.68,
+                  "bot": 5084.2,
+                  "ce": 5085.9400000000005,
+                  "index": "2026-03-06T02:35:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 34.2,
+                  "is_first_fvg": true,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5117.6,
+                  "bot": 5109.47,
+                  "ce": 5113.535,
+                  "index": "2026-03-06T03:40:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 65.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5121.14,
+                  "bot": 5120.39,
+                  "ce": 5120.765,
+                  "index": "2026-03-06T03:45:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 73.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5134.37,
+                  "bot": 5121.37,
+                  "ce": 5127.87,
+                  "index": "2026-03-06T03:50:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 81.8,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5132.86,
+                  "bot": 5130.71,
+                  "ce": 5131.785,
+                  "index": "2026-03-06T06:20:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 86.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 5131.785,
+                  "zone": [
+                    5130.71,
+                    5132.86
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 5131.549999999999,
+                  "zone": [
+                    5129.99,
+                    5133.11
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BEARISH_OB",
+                "level": 5118.89,
+                "index": "2026-03-06T08:50:00",
+                "refined_zone": [
+                  5116.58,
+                  5122.53
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 5113.8,
+                "index": "2026-03-06T09:25:00",
+                "refined_zone": [
+                  5107.72,
+                  5119.78
+                ],
+                "candle_count": 3,
+                "quality_score": 4,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 0,
+              "bull_wick_ce": 0
+            },
+            "protected_levels": {
+              "low": {
+                "price": 5105.86,
+                "status": "TARGET"
+              },
+              "high": {
+                "price": 5123.25,
+                "status": "TARGET"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BEAR",
+                "top": 5129.86,
+                "bot": 5129.85,
+                "ce": 5129.855,
+                "index": "2026-03-06T06:35:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5124.81,
+                "bot": 5124.79,
+                "ce": 5124.8,
+                "index": "2026-03-06T07:35:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5118.89,
+                "bot": 5118.88,
+                "ce": 5118.885,
+                "index": "2026-03-06T08:20:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5118.98,
+                "bot": 5118.89,
+                "ce": 5118.9349999999995,
+                "index": "2026-03-06T08:50:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5119.74,
+                "bot": 5119.68,
+                "ce": 5119.71,
+                "index": "2026-03-06T10:00:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": false,
+              "bullish_sweep": false,
+              "bearish_sweep": false,
+              "pdh": 5094.8,
+              "pdl": 5055.78
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 5122.315,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5122.965,
+                "quality": "SMOOTH",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5136.15,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 5122.91,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5129.485,
+                "quality": "JAGGED",
+                "swept": false,
+                "proximity": "PROXIMAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5143.94,
+              "low": 5066.5,
+              "high_swept": false,
+              "low_swept": false,
+              "high_status": "INTACT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 5113.754999999999,
+                "type": "SIBI"
+              },
+              {
+                "price": 5117.125,
+                "type": "BISI"
+              }
+            ],
+            "ndog": 5117.42,
+            "nwog": 0,
+            "temporal_levels": {
+              "PDH": {
+                "price": 5171.53,
+                "status": "INTACT",
+                "side": "ABOVE"
+              },
+              "PDL": {
+                "price": 5050.88,
+                "status": "INTACT",
+                "side": "BELOW"
+              },
+              "PWH": {
+                "price": 5143.94,
+                "status": "INTACT",
+                "side": "ABOVE"
+              },
+              "PWL": {
+                "price": 5066.5,
+                "status": "INTACT",
+                "side": "BELOW"
+              }
+            },
+            "dol_bull": {
+              "name": "EQH (SMOOTH)",
+              "price": 5136.15,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "PWL",
+              "price": 5066.5,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5136.15,
+                "label": "LRLR ✅ vers 5136.15 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5066.5,
+                "label": "LRLR ✅ vers 5066.5 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5084.82,
+              "cbdr_low": 5071.93,
+              "cbdr_range_pips": 12.9,
+              "cbdr_explosive": true,
+              "flout_high": 5141.53,
+              "flout_low": 5122.16,
+              "projections_bull": {
+                "sd_1_0": 5097.71,
+                "sd_2_0": 5110.6,
+                "sd_2_5": 5117.045,
+                "sd_3_5": 5129.935
+              },
+              "projections_bear": {
+                "sd_1_0": 5059.04,
+                "sd_2_0": 5046.15,
+                "sd_2_5": 5039.705,
+                "sd_3_5": 5026.815
+              }
+            },
+            "proximal_liquidity": 5122.315
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 5112.3028,
+              "lvl_705": 5111.277700000001,
+              "lvl_79": 5110.2526
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BULLISH_OB",
+                "price": 5113.8,
+                "power": 4.0,
+                "dist": 3.3099999999994907
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5118.89,
+                "power": 3.5,
+                "dist": 1.7800000000006548
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5113.535,
+                "power": 2,
+                "dist": 3.574999999999818
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5120.765,
+                "power": 2,
+                "dist": 3.655000000000655
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5127.87,
+                "power": 2,
+                "dist": 10.760000000000218
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5131.785,
+                "power": 2,
+                "dist": 14.675000000000182
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5096.07,
+                "power": 2,
+                "dist": 21.039999999999964
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5093.870000000001,
+                "power": 2,
+                "dist": 23.239999999998872
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5085.9400000000005,
+                "power": 2,
+                "dist": 31.169999999999163
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5078.775,
+                "power": 2,
+                "dist": 38.335000000000036
+              }
+            ],
+            "projections": {
+              "target_1_0": 5131.839999999999,
+              "target_2_0": 5143.899999999999,
+              "target_2_5": 5149.9299999999985,
+              "target_3_5": 5161.989999999998
+            },
+            "equilibrium": {
+              "mid": 5113.75,
+              "zone": "DEEP_PREMIUM",
+              "percent": 77.8606965174114
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5153.93,
+            "po3_phase": "MANIPULATION_HIGH_HUNT",
+            "turtle_soup": "NONE",
+            "silver_bullet": "SCANNING_SB",
+            "mmxm_cycle": "CONSOLIDATION_RANGE"
+          },
+          "smt": null,
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      },
+      "MN": {
+        "last_updated": "2026-03-05T18:01:56.291029",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": true,
+              "power_ratio": 3.29,
+              "velocity": "EXTREME"
+            },
+            "is_displaced": true,
+            "displacement_score": 3.29,
+            "structure": {
+              "mode": "EXPANSION_BULL",
+              "choch": "CHoCH_BULL_ALERT",
+              "swh": 5598.03,
+              "swl": 1810.47,
+              "prev_swh": 3499.98,
+              "prev_swl": 1614.81,
+              "ext_swh": 5598.03,
+              "ext_swl": 1046.23
+            },
+            "fvgs": [
+              {
+                "type": "IFVG_BISI",
+                "top": 1310.18,
+                "bot": 1309.28,
+                "ce": 1309.73,
+                "index": "2018-05-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 5.8,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 1282.0,
+                "bot": 1265.84,
+                "ce": 1273.92,
+                "index": "2018-06-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 5.0,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 1245.84,
+                "bot": 1224.76,
+                "ce": 1235.3,
+                "index": "2018-07-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 4.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 1302.34,
+                "bot": 1284.02,
+                "ce": 1293.1799999999998,
+                "index": "2019-01-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 5.4,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 1862.58,
+                "bot": 1785.94,
+                "ce": 1824.26,
+                "index": "2020-07-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 17.1,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 1810.29,
+                "bot": 1759.89,
+                "ce": 1785.0900000000001,
+                "index": "2021-02-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 16.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 1766.04,
+                "bot": 1759.89,
+                "ce": 1762.9650000000001,
+                "index": "2021-04-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 15.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 1890.02,
+                "bot": 1853.9,
+                "ce": 1871.96,
+                "index": "2022-02-01T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 18.1,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "IFVG_BISI",
+                  "top": 1310.18,
+                  "bot": 1309.28,
+                  "ce": 1309.73,
+                  "index": "2018-05-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 5.8,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 1282.0,
+                  "bot": 1265.84,
+                  "ce": 1273.92,
+                  "index": "2018-06-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 5.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 1245.84,
+                  "bot": 1224.76,
+                  "ce": 1235.3,
+                  "index": "2018-07-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 4.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 1302.34,
+                  "bot": 1284.02,
+                  "ce": 1293.1799999999998,
+                  "index": "2019-01-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 5.4,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 1862.58,
+                  "bot": 1785.94,
+                  "ce": 1824.26,
+                  "index": "2020-07-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 17.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 1810.29,
+                  "bot": 1759.89,
+                  "ce": 1785.0900000000001,
+                  "index": "2021-02-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 16.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 1766.04,
+                  "bot": 1759.89,
+                  "ce": 1762.9650000000001,
+                  "index": "2021-04-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 15.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 1890.02,
+                  "bot": 1853.9,
+                  "ce": 1871.96,
+                  "index": "2022-02-01T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 18.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 1762.87,
+                  "zone": [
+                    1759.89,
+                    1765.85
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 1798.4299999999998,
+                  "zone": [
+                    1786.57,
+                    1810.29
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BULLISH_OB",
+                "level": 2652.01,
+                "index": "2024-11-01T00:00:00",
+                "refined_zone": [
+                  2536.77,
+                  2762.26
+                ],
+                "candle_count": 2,
+                "quality_score": 5,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 3303.4,
+                "index": "2025-07-01T00:00:00",
+                "refined_zone": [
+                  3268.17,
+                  3438.77
+                ],
+                "candle_count": 1,
+                "quality_score": 5,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 5246.25,
+              "bull_wick_ce": 0
+            },
+            "protected_levels": {
+              "low": {
+                "price": 2038.92,
+                "status": "PROTECTED"
+              },
+              "high": {
+                "price": 5598.03,
+                "status": "TARGET"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BULL",
+                "top": 3858.58,
+                "bot": 3858.23,
+                "ce": 3858.4049999999997,
+                "index": "2025-10-01T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 4002.14,
+                "bot": 3989.66,
+                "ce": 3995.8999999999996,
+                "index": "2025-11-01T00:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 4222.86,
+                "bot": 4219.09,
+                "ce": 4220.975,
+                "index": "2025-12-01T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 4318.82,
+                "bot": 4318.72,
+                "ce": 4318.77,
+                "index": "2026-01-01T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 4894.47,
+                "bot": 4773.75,
+                "ce": 4834.110000000001,
+                "index": "2026-02-01T00:00:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": true,
+              "bullish_sweep": false,
+              "bearish_sweep": true,
+              "pdh": 4381.53,
+              "pdl": 1046.23
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 2107.535,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 2105.79,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 2068.555,
+                "quality": "SMOOTH",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 1896.905,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 1649.005,
+                "quality": "JAGGED",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5598.03,
+              "low": 1160.07,
+              "high_swept": true,
+              "low_swept": false,
+              "high_status": "SWEPT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 2837.5550000000003,
+                "type": "BISI"
+              },
+              {
+                "price": 2956.2200000000003,
+                "type": "BISI"
+              },
+              {
+                "price": 3636.58,
+                "type": "BISI"
+              },
+              {
+                "price": 3900.2799999999997,
+                "type": "BISI"
+              },
+              {
+                "price": 4277.68,
+                "type": "BISI"
+              }
+            ],
+            "ndog": 5363.14,
+            "nwog": 4222.86,
+            "temporal_levels": {
+              "PWH": {
+                "price": 2074.87,
+                "status": "SWEPT",
+                "side": "BELOW"
+              },
+              "PWL": {
+                "price": 1122.62,
+                "status": "INTACT",
+                "side": "BELOW"
+              }
+            },
+            "dol_bull": {
+              "name": "N/A",
+              "price": 5598.03,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "EQL (JAGGED)",
+              "price": 1649.005,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5598.03,
+                "label": "LRLR ✅ vers 5598.03 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 1649.005,
+                "label": "LRLR ✅ vers 1649.005 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5598.03,
+              "cbdr_low": 1973.0,
+              "cbdr_range_pips": 3625.0,
+              "cbdr_explosive": false,
+              "flout_high": 5598.03,
+              "flout_low": 2536.77,
+              "projections_bull": {
+                "sd_1_0": 9223.06,
+                "sd_2_0": 12848.09,
+                "sd_2_5": 14660.605,
+                "sd_3_5": 18285.635
+              },
+              "projections_bear": {
+                "sd_1_0": -1652.03,
+                "sd_2_0": -5277.06,
+                "sd_2_5": -7089.575,
+                "sd_3_5": -10714.605
+              }
+            },
+            "proximal_liquidity": 5598.03
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 3249.7428,
+              "lvl_705": 2927.8002,
+              "lvl_79": 2605.8576
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BULLISH_OB",
+                "price": 3303.4,
+                "power": 4.5,
+                "dist": 1776.5399999999995
+              },
+              {
+                "type": "BULLISH_OB",
+                "price": 2652.01,
+                "power": 4.5,
+                "dist": 2427.9299999999994
+              },
+              {
+                "type": "REJECTION_BEAR",
+                "price": 5246.25,
+                "power": 2,
+                "dist": 166.3100000000004
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 1871.96,
+                "power": 2,
+                "dist": 3207.9799999999996
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 1824.26,
+                "power": 2,
+                "dist": 3255.6799999999994
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 1785.0900000000001,
+                "power": 2,
+                "dist": 3294.8499999999995
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 1762.9650000000001,
+                "power": 2,
+                "dist": 3316.9749999999995
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 1309.73,
+                "power": 2,
+                "dist": 3770.2099999999996
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 1293.1799999999998,
+                "power": 2,
+                "dist": 3786.7599999999998
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 1273.92,
+                "power": 2,
+                "dist": 3806.0199999999995
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 1235.3,
+                "power": 2,
+                "dist": 3844.6399999999994
+              }
+            ],
+            "projections": {
+              "target_1_0": 9385.59,
+              "target_2_0": 13173.149999999998,
+              "target_2_5": 15066.929999999997,
+              "target_3_5": 18854.489999999998
+            },
+            "equilibrium": {
+              "mid": 3704.25,
+              "zone": "DEEP_PREMIUM",
+              "percent": 86.3212727983187
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5363.14,
+            "po3_phase": "EXPANSION_PHASE",
+            "turtle_soup": "BEARISH_TURTLE_SOUP",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "TREND_FOLLOWING"
+          },
+          "smt": null,
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      },
+      "W1": {
+        "last_updated": "2026-03-05T18:01:56.421640",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": false,
+              "power_ratio": 2.25,
+              "velocity": "NORMAL"
+            },
+            "is_displaced": false,
+            "displacement_score": 2.25,
+            "structure": {
+              "mode": "EXPANSION_BULL",
+              "choch": "CHoCH_BULL_ALERT",
+              "swh": 5598.03,
+              "swl": 4402.14,
+              "prev_swh": 4549.92,
+              "prev_swl": 3886.62,
+              "ext_swh": 5598.03,
+              "ext_swl": 1810.47
+            },
+            "fvgs": [
+              {
+                "type": "BISI",
+                "top": 3579.64,
+                "bot": 3453.88,
+                "ce": 3516.76,
+                "index": "2025-08-31T00:00:00",
+                "mitigated": false,
+                "quality": "FRESH",
+                "position_quality": "HIGH",
+                "position_pct": 45.0,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "BISI",
+                "top": 3884.26,
+                "bot": 3791.18,
+                "ce": 3837.7200000000003,
+                "index": "2025-09-28T00:00:00",
+                "mitigated": false,
+                "quality": "FRESH",
+                "position_quality": "HIGH",
+                "position_pct": 53.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "BISI",
+                "top": 4003.2,
+                "bot": 3896.82,
+                "ce": 3950.01,
+                "index": "2025-10-05T00:00:00",
+                "mitigated": true,
+                "quality": "MITIGATED",
+                "position_quality": "HIGH",
+                "position_pct": 56.5,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "BISI",
+                "top": 4163.43,
+                "bot": 4132.46,
+                "ce": 4147.945,
+                "index": "2025-11-23T00:00:00",
+                "mitigated": false,
+                "quality": "FRESH",
+                "position_quality": "HIGH",
+                "position_pct": 61.7,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "BISI",
+                "top": 4682.18,
+                "bot": 4642.91,
+                "ce": 4662.545,
+                "index": "2026-01-18T00:00:00",
+                "mitigated": true,
+                "quality": "MITIGATED",
+                "position_quality": "LOW",
+                "position_pct": 75.3,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 1925.53,
+                "bot": 1916.24,
+                "ce": 1920.885,
+                "index": "2023-08-06T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 2.9,
+                "is_first_fvg": true,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 1913.9,
+                "bot": 1848.93,
+                "ce": 1881.415,
+                "index": "2023-09-24T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 1.9,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 2708.78,
+                "bot": 2661.4,
+                "ce": 2685.09,
+                "index": "2024-10-13T00:00:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 23.1,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "BISI",
+                  "top": 3579.64,
+                  "bot": 3453.88,
+                  "ce": 3516.76,
+                  "index": "2025-08-31T00:00:00",
+                  "mitigated": false,
+                  "quality": "FRESH",
+                  "position_quality": "HIGH",
+                  "position_pct": 45.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "BISI",
+                  "top": 3884.26,
+                  "bot": 3791.18,
+                  "ce": 3837.7200000000003,
+                  "index": "2025-09-28T00:00:00",
+                  "mitigated": false,
+                  "quality": "FRESH",
+                  "position_quality": "HIGH",
+                  "position_pct": 53.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "BISI",
+                  "top": 4003.2,
+                  "bot": 3896.82,
+                  "ce": 3950.01,
+                  "index": "2025-10-05T00:00:00",
+                  "mitigated": true,
+                  "quality": "MITIGATED",
+                  "position_quality": "HIGH",
+                  "position_pct": 56.5,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "BISI",
+                  "top": 4163.43,
+                  "bot": 4132.46,
+                  "ce": 4147.945,
+                  "index": "2025-11-23T00:00:00",
+                  "mitigated": false,
+                  "quality": "FRESH",
+                  "position_quality": "HIGH",
+                  "position_pct": 61.7,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "BISI",
+                  "top": 4682.18,
+                  "bot": 4642.91,
+                  "ce": 4662.545,
+                  "index": "2026-01-18T00:00:00",
+                  "mitigated": true,
+                  "quality": "MITIGATED",
+                  "position_quality": "LOW",
+                  "position_pct": 75.3,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 1925.53,
+                  "bot": 1916.24,
+                  "ce": 1920.885,
+                  "index": "2023-08-06T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 2.9,
+                  "is_first_fvg": true,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 1913.9,
+                  "bot": 1848.93,
+                  "ce": 1881.415,
+                  "index": "2023-09-24T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 1.9,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 2708.78,
+                  "bot": 2661.4,
+                  "ce": 2685.09,
+                  "index": "2024-10-13T00:00:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 23.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 1878.565,
+                  "zone": [
+                    1848.93,
+                    1908.2
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 1878.565,
+                  "zone": [
+                    1848.93,
+                    1908.2
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BULLISH_OB",
+                "level": 4081.47,
+                "index": "2025-11-16T00:00:00",
+                "refined_zone": [
+                  3998.36,
+                  4132.46
+                ],
+                "candle_count": 1,
+                "quality_score": 4,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 4222.86,
+                "index": "2025-11-30T00:00:00",
+                "refined_zone": [
+                  4163.43,
+                  4264.63
+                ],
+                "candle_count": 1,
+                "quality_score": 4,
+                "in_killzone": true
+              },
+              {
+                "type": "BEARISH_OB",
+                "level": 4339.63,
+                "index": "2025-12-07T00:00:00",
+                "refined_zone": [
+                  4170.27,
+                  4549.92
+                ],
+                "candle_count": 3,
+                "quality_score": 1,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 5303.045,
+              "bull_wick_ce": 0
+            },
+            "protected_levels": {
+              "low": {
+                "price": 3626.69,
+                "status": "PROTECTED"
+              },
+              "high": {
+                "price": 5598.03,
+                "status": "TARGET"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BULL",
+                "top": 5008.06,
+                "bot": 4986.43,
+                "ce": 4997.245000000001,
+                "index": "2026-01-25T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 4894.47,
+                "bot": 4773.75,
+                "ce": 4834.110000000001,
+                "index": "2026-02-01T00:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 4986.72,
+                "bot": 4964.88,
+                "ce": 4975.8,
+                "index": "2026-02-08T00:00:00"
+              },
+              {
+                "type": "VI_BEAR",
+                "top": 5042.47,
+                "bot": 5034.28,
+                "ce": 5038.375,
+                "index": "2026-02-15T00:00:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5109.54,
+                "bot": 5107.13,
+                "ce": 5108.335,
+                "index": "2026-02-22T00:00:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": false,
+              "bullish_sweep": false,
+              "bearish_sweep": false,
+              "pdh": 5598.03,
+              "pdl": 1810.47
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 3475.605,
+                "quality": "JAGGED",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 3469.375,
+                "quality": "JAGGED",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 3445.0,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 3289.86,
+                "quality": "JAGGED",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 3280.015,
+                "quality": "JAGGED",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              },
+              {
+                "price": 3258.325,
+                "quality": "SMOOTH",
+                "swept": false,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5598.03,
+              "low": 2277.38,
+              "high_swept": true,
+              "low_swept": false,
+              "high_status": "SWEPT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 4147.945,
+                "type": "BISI"
+              },
+              {
+                "price": 4268.085,
+                "type": "BISI"
+              },
+              {
+                "price": 4569.13,
+                "type": "BISI"
+              },
+              {
+                "price": 4662.545,
+                "type": "BISI"
+              }
+            ],
+            "ndog": 5363.14,
+            "nwog": 0,
+            "temporal_levels": {
+              "PWH": {
+                "price": 2790.09,
+                "status": "INTACT",
+                "side": "BELOW"
+              },
+              "PWL": {
+                "price": 1965.4,
+                "status": "INTACT",
+                "side": "BELOW"
+              }
+            },
+            "dol_bull": {
+              "name": "N/A",
+              "price": 5598.03,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "EQL (JAGGED)",
+              "price": 3289.86,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5598.03,
+                "label": "LRLR ✅ vers 5598.03 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 3289.86,
+                "label": "LRLR ✅ vers 3289.86 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5598.03,
+              "cbdr_low": 4271.54,
+              "cbdr_range_pips": 1326.5,
+              "cbdr_explosive": false,
+              "flout_high": 5598.03,
+              "flout_low": 3928.9,
+              "projections_bull": {
+                "sd_1_0": 6924.52,
+                "sd_2_0": 8251.01,
+                "sd_2_5": 8914.255,
+                "sd_3_5": 10240.745
+              },
+              "projections_bear": {
+                "sd_1_0": 2945.05,
+                "sd_2_0": 1618.56,
+                "sd_2_5": 955.315,
+                "sd_3_5": -371.175
+              }
+            },
+            "proximal_liquidity": 5598.03
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 4856.5782,
+              "lvl_705": 4754.92755,
+              "lvl_79": 4653.2769
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BULLISH_OB",
+                "price": 4222.86,
+                "power": 4.0,
+                "dist": 856.4200000000001
+              },
+              {
+                "type": "BULLISH_OB",
+                "price": 4081.47,
+                "power": 4.0,
+                "dist": 997.81
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 4339.63,
+                "power": 2.5,
+                "dist": 739.6499999999996
+              },
+              {
+                "type": "REJECTION_BEAR",
+                "price": 5303.045,
+                "power": 2,
+                "dist": 223.76500000000033
+              },
+              {
+                "type": "BISI",
+                "price": 4147.945,
+                "power": 2,
+                "dist": 931.335
+              },
+              {
+                "type": "BISI",
+                "price": 3837.7200000000003,
+                "power": 2,
+                "dist": 1241.5599999999995
+              },
+              {
+                "type": "BISI",
+                "price": 3516.76,
+                "power": 2,
+                "dist": 1562.5199999999995
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 2685.09,
+                "power": 2,
+                "dist": 2394.1899999999996
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 1920.885,
+                "power": 2,
+                "dist": 3158.3949999999995
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 1881.415,
+                "power": 2,
+                "dist": 3197.865
+              },
+              {
+                "type": "BISI",
+                "price": 4662.545,
+                "power": 1,
+                "dist": 416.7349999999997
+              },
+              {
+                "type": "BISI",
+                "price": 3950.01,
+                "power": 1,
+                "dist": 1129.2699999999995
+              }
+            ],
+            "projections": {
+              "target_1_0": 6793.919999999999,
+              "target_2_0": 7989.809999999999,
+              "target_2_5": 8587.754999999997,
+              "target_3_5": 9783.644999999997
+            },
+            "equilibrium": {
+              "mid": 5000.085,
+              "zone": "PREMIUM",
+              "percent": 56.62226458955253
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5363.14,
+            "po3_phase": "ACCUMULATION",
+            "turtle_soup": "NONE",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "TREND_FOLLOWING"
+          },
+          "smt": null,
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      },
+      "M1": {
+        "last_updated": "2026-03-05T18:01:58.273545",
+        "data": {
+          "clock": {
+            "ny_time": "12:01",
+            "day": "JEUDI",
+            "weekday_num": 3,
+            "killzone": "NONE",
+            "silver_bullet": "NONE",
+            "macro": "NY_LUNCH_MACRO",
+            "is_tradable": true,
+            "is_high_prob": false,
+            "friday_no_trade": false,
+            "in_cbdr_window": false,
+            "minutes_total": 721
+          },
+          "smc": {
+            "displacement": {
+              "is_displaced": false,
+              "power_ratio": 1.11,
+              "velocity": "NORMAL"
+            },
+            "is_displaced": false,
+            "displacement_score": 1.11,
+            "structure": {
+              "mode": "CONSOLIDATION",
+              "choch": "NONE",
+              "swh": 5081.35,
+              "swl": 5073.54,
+              "prev_swh": 5080.57,
+              "prev_swl": 5070.32,
+              "ext_swh": 5123.81,
+              "ext_swl": 5054.36
+            },
+            "fvgs": [
+              {
+                "type": "IFVG_SIBI",
+                "top": 5082.49,
+                "bot": 5081.52,
+                "ce": 5082.005,
+                "index": "2026-03-05T17:29:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 39.8,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5096.2,
+                "bot": 5093.54,
+                "ce": 5094.87,
+                "index": "2026-03-05T17:53:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 58.3,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5101.76,
+                "bot": 5098.39,
+                "ce": 5100.075000000001,
+                "index": "2026-03-05T17:59:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 65.8,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5075.37,
+                "bot": 5073.75,
+                "ce": 5074.5599999999995,
+                "index": "2026-03-05T18:21:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 29.1,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5069.22,
+                "bot": 5066.17,
+                "ce": 5067.695,
+                "index": "2026-03-05T18:27:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 19.2,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5069.22,
+                "bot": 5068.51,
+                "ce": 5068.865,
+                "index": "2026-03-05T18:29:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 20.9,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_SIBI",
+                "top": 5073.35,
+                "bot": 5072.76,
+                "ce": 5073.055,
+                "index": "2026-03-05T18:45:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "HIGH",
+                "position_pct": 26.9,
+                "is_first_fvg": false,
+                "institutional": true
+              },
+              {
+                "type": "IFVG_BISI",
+                "top": 5075.94,
+                "bot": 5074.39,
+                "ce": 5075.165,
+                "index": "2026-03-05T18:51:00",
+                "mitigated": true,
+                "quality": "INVERTED",
+                "position_quality": "LOW",
+                "position_pct": 30.0,
+                "is_first_fvg": false,
+                "institutional": true
+              }
+            ],
+            "fvgs_pd_arrays": {
+              "all_fvgs": [
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5082.49,
+                  "bot": 5081.52,
+                  "ce": 5082.005,
+                  "index": "2026-03-05T17:29:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 39.8,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5096.2,
+                  "bot": 5093.54,
+                  "ce": 5094.87,
+                  "index": "2026-03-05T17:53:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 58.3,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5101.76,
+                  "bot": 5098.39,
+                  "ce": 5100.075000000001,
+                  "index": "2026-03-05T17:59:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 65.8,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5075.37,
+                  "bot": 5073.75,
+                  "ce": 5074.5599999999995,
+                  "index": "2026-03-05T18:21:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 29.1,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5069.22,
+                  "bot": 5066.17,
+                  "ce": 5067.695,
+                  "index": "2026-03-05T18:27:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 19.2,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5069.22,
+                  "bot": 5068.51,
+                  "ce": 5068.865,
+                  "index": "2026-03-05T18:29:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 20.9,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_SIBI",
+                  "top": 5073.35,
+                  "bot": 5072.76,
+                  "ce": 5073.055,
+                  "index": "2026-03-05T18:45:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "HIGH",
+                  "position_pct": 26.9,
+                  "is_first_fvg": false,
+                  "institutional": true
+                },
+                {
+                  "type": "IFVG_BISI",
+                  "top": 5075.94,
+                  "bot": 5074.39,
+                  "ce": 5075.165,
+                  "index": "2026-03-05T18:51:00",
+                  "mitigated": true,
+                  "quality": "INVERTED",
+                  "position_quality": "LOW",
+                  "position_pct": 30.0,
+                  "is_first_fvg": false,
+                  "institutional": true
+                }
+              ],
+              "bprs": [
+                {
+                  "level": 5074.88,
+                  "zone": [
+                    5074.39,
+                    5075.37
+                  ],
+                  "strength": "INSTITUTIONAL"
+                },
+                {
+                  "level": 5075.135,
+                  "zone": [
+                    5074.39,
+                    5075.88
+                  ],
+                  "strength": "INSTITUTIONAL"
+                }
+              ]
+            },
+            "institutional_blocks": [
+              {
+                "type": "BEARISH_OB",
+                "level": 5075.11,
+                "index": "2026-03-05T18:43:00",
+                "refined_zone": [
+                  5061.87,
+                  5076.08
+                ],
+                "candle_count": 4,
+                "quality_score": 1,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 5075.69,
+                "index": "2026-03-05T18:47:00",
+                "refined_zone": [
+                  5072.95,
+                  5076.12
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              },
+              {
+                "type": "BULLISH_OB",
+                "level": 5077.43,
+                "index": "2026-03-05T18:58:00",
+                "refined_zone": [
+                  5073.54,
+                  5077.51
+                ],
+                "candle_count": 1,
+                "quality_score": 3,
+                "in_killzone": true
+              }
+            ],
+            "rejections": {
+              "bear_wick_ce": 5079.915,
+              "bull_wick_ce": 5059.88
+            },
+            "protected_levels": {
+              "low": {
+                "price": 5061.87,
+                "status": "TARGET"
+              },
+              "high": {
+                "price": 5081.35,
+                "status": "TARGET"
+              }
+            },
+            "volume_imbalances": [
+              {
+                "type": "VI_BEAR",
+                "top": 5063.36,
+                "bot": 5063.32,
+                "ce": 5063.34,
+                "index": "2026-03-05T18:39:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5070.94,
+                "bot": 5070.93,
+                "ce": 5070.9349999999995,
+                "index": "2026-03-05T18:45:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5076.99,
+                "bot": 5076.97,
+                "ce": 5076.98,
+                "index": "2026-03-05T18:51:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5075.88,
+                "bot": 5075.85,
+                "ce": 5075.865,
+                "index": "2026-03-05T18:54:00"
+              },
+              {
+                "type": "VI_BULL",
+                "top": 5076.4,
+                "bot": 5076.38,
+                "ce": 5076.389999999999,
+                "index": "2026-03-05T18:57:00"
+              }
+            ],
+            "boolean_sweep_erl": {
+              "value": false,
+              "bullish_sweep": false,
+              "bearish_sweep": false,
+              "pdh": 5123.81,
+              "pdl": 5054.36
+            }
+          },
+          "liq": {
+            "eqh": [
+              {
+                "price": 5080.28,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5080.96,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              }
+            ],
+            "eql": [
+              {
+                "price": 5073.9,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5073.04,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "PROXIMAL",
+                "count": 2
+              },
+              {
+                "price": 5062.195,
+                "quality": "JAGGED",
+                "swept": true,
+                "proximity": "DISTAL",
+                "count": 2
+              }
+            ],
+            "erl": {
+              "high": 5104.65,
+              "low": 5054.36,
+              "high_swept": false,
+              "low_swept": false,
+              "high_status": "INTACT",
+              "low_status": "INTACT"
+            },
+            "irl": [
+              {
+                "price": 5069.3099999999995,
+                "type": "BISI"
+              },
+              {
+                "price": 5073.055,
+                "type": "BISI"
+              },
+              {
+                "price": 5075.165,
+                "type": "SIBI"
+              },
+              {
+                "price": 5075.135,
+                "type": "BISI"
+              },
+              {
+                "price": 5076.37,
+                "type": "BISI"
+              }
+            ],
+            "ndog": 5069.18,
+            "nwog": 0,
+            "temporal_levels": {
+              "PWH": {
+                "price": 5119.98,
+                "status": "INTACT",
+                "side": "ABOVE"
+              },
+              "PWL": {
+                "price": 5060.45,
+                "status": "SWEPT",
+                "side": "BELOW"
+              }
+            },
+            "dol_bull": {
+              "name": "BSL MAX",
+              "price": 5104.65,
+              "type": "BSL"
+            },
+            "dol_bear": {
+              "name": "SSL MIN",
+              "price": 5054.36,
+              "type": "SSL"
+            },
+            "lrlr_hrlr": {
+              "bull": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5104.65,
+                "label": "LRLR ✅ vers 5104.65 (0 obstacles)"
+              },
+              "bear": {
+                "type": "LRLR",
+                "obstacles": 0,
+                "target": 5054.36,
+                "label": "LRLR ✅ vers 5054.36 (0 obstacles)"
+              }
+            },
+            "cbdr": {
+              "cbdr_high": 5080.0,
+              "cbdr_low": 5074.12,
+              "cbdr_range_pips": 5.9,
+              "cbdr_explosive": true,
+              "flout_high": 5080.0,
+              "flout_low": 5074.12,
+              "projections_bull": {
+                "sd_1_0": 5085.88,
+                "sd_2_0": 5091.76,
+                "sd_2_5": 5094.7,
+                "sd_3_5": 5100.58
+              },
+              "projections_bear": {
+                "sd_1_0": 5068.24,
+                "sd_2_0": 5062.36,
+                "sd_2_5": 5059.42,
+                "sd_3_5": 5053.54
+              }
+            },
+            "proximal_liquidity": 5080.28
+          },
+          "exe": {
+            "ote": {
+              "lvl_62": 5076.5078,
+              "lvl_705": 5075.84395,
+              "lvl_79": 5075.1801000000005
+            },
+            "pd_hierarchy": [
+              {
+                "type": "BULLISH_OB",
+                "price": 5077.43,
+                "power": 3.5,
+                "dist": 1.75
+              },
+              {
+                "type": "BULLISH_OB",
+                "price": 5075.69,
+                "power": 3.5,
+                "dist": 3.490000000000691
+              },
+              {
+                "type": "BEARISH_OB",
+                "price": 5075.11,
+                "power": 2.5,
+                "dist": 4.0700000000006185
+              },
+              {
+                "type": "REJECTION_BEAR",
+                "price": 5079.915,
+                "power": 2,
+                "dist": 0.7349999999996726
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5082.005,
+                "power": 2,
+                "dist": 2.824999999999818
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5075.165,
+                "power": 2,
+                "dist": 4.015000000000327
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5074.5599999999995,
+                "power": 2,
+                "dist": 4.6200000000008
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5073.055,
+                "power": 2,
+                "dist": 6.125
+              },
+              {
+                "type": "IFVG_BISI",
+                "price": 5068.865,
+                "power": 2,
+                "dist": 10.31500000000051
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5067.695,
+                "power": 2,
+                "dist": 11.485000000000582
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5094.87,
+                "power": 2,
+                "dist": 15.6899999999996
+              },
+              {
+                "type": "REJECTION_BULL",
+                "price": 5059.88,
+                "power": 2,
+                "dist": 19.300000000000182
+              },
+              {
+                "type": "IFVG_SIBI",
+                "price": 5100.075000000001,
+                "power": 2,
+                "dist": 20.895000000000437
+              }
+            ],
+            "projections": {
+              "target_1_0": 5089.160000000001,
+              "target_2_0": 5096.970000000001,
+              "target_2_5": 5100.875000000002,
+              "target_3_5": 5108.685000000001
+            },
+            "equilibrium": {
+              "mid": 5077.445,
+              "zone": "PREMIUM",
+              "percent": 72.21510883482763
+            }
+          },
+          "mmxm": {
+            "midnight_open": 5163.96,
+            "po3_phase": "ACCUMULATION",
+            "turtle_soup": "NONE",
+            "silver_bullet": "INACTIVE",
+            "mmxm_cycle": "CONSOLIDATION_RANGE"
+          },
+          "smt": null,
+          "checklist": {
+            "score": 0,
+            "verdict": "NO_DATA"
+          }
+        }
+      }
+    },
+    "global_bias": {
+      "last_updated": "2026-03-05T18:01:55.457727",
+      "data": {
+        "daily_levels": {
+          "pdh": 5206.14,
+          "pdl": 5084.39
+        },
+        "weekly_levels": {
+          "pwh": 5281.03,
+          "pwl": 5094.14
+        },
+        "monthly_levels": {
+          "pmh": 5281.03,
+          "pml": 4402.14
+        },
+        "ipda_ranges": {
+          "r20": {
+            "high": 5419.26,
+            "low": 4655.27,
+            "mid": 5037.265
+          },
+          "r40": {
+            "high": 5598.03,
+            "low": 4402.14,
+            "mid": 5000.085
+          },
+          "r60": {
+            "high": 5598.03,
+            "low": 4182.08,
+            "mid": 4890.055
+          }
+        },
+        "htf_bias": "BULLISH_RETRACE",
+        "draw_on_liquidity": {
+          "name": "PDL",
+          "price": 5084.39,
+          "dist": 0.0008681136539909142
+        }
+      }
+    }
+  }
+}

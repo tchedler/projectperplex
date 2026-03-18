@@ -1,0 +1,13 @@
+# ICT SENTINEL PRO — Fichiers à ne JAMAIS committer
+.env
+*.env
+data/trades.db
+data/bot_config.json
+data/failure_cases.json
+data/bot.log
+sentinel_pro.log
+__pycache__/
+*.pyc
+venv/
+.vscode/
+reports/*.png

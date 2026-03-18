@@ -1,0 +1,511 @@
+{
+  "version": "2.1",
+  "last_updated": "2026-03-03",
+  "canonical_macros_reference": "ict_encyclopedia.md#section-2.3",
+  "scoring_threshold": {
+    "execution_a_plus": 80,
+    "watch_sniper_limit": "65-79",
+    "forbidden": 64
+  },
+  "encyclopedia": {
+    "file": "ict_encyclopedia.md",
+    "version": "2.1",
+    "sections": {
+      "philosophy": {
+        "start": 34,
+        "end": 54,
+        "keywords": [
+          "IPDA",
+          "Smart Money",
+          "Philosophy"
+        ],
+        "youtube_references": [
+          "https://www.youtube.com/watch?v=R9_S0Vb6NXY"
+        ]
+      },
+      "ipda_foundations": {
+        "start": 56,
+        "end": 130,
+        "keywords": [
+          "Data Ranges",
+          "Quarterly Shifts",
+          "Daily Bias",
+          "Weekly Profile",
+          "Yearly Seasonality"
+        ]
+      },
+      "time_matrix": {
+        "start": 132,
+        "end": 200,
+        "keywords": [
+          "Killzones",
+          "Macros",
+          "Silver Bullet",
+          "NWOG",
+          "NDOG",
+          "Seek and Destroy",
+          "CBDR",
+          "Flout"
+        ]
+      },
+      "pd_arrays": {
+        "start": 202,
+        "end": 320,
+        "keywords": [
+          "OB",
+          "Order Block",
+          "FVG",
+          "Fair Value Gap",
+          "SIBI",
+          "BISI",
+          "CE",
+          "OTE",
+          "Premium",
+          "Discount",
+          "BPR",
+          "Volume Imbalance"
+        ],
+        "youtube_references": [
+          "https://www.youtube.com/playlist?list=PLVgHx4Z6qykj6-V6U2vwaof-oXWiwf0yM"
+        ]
+      },
+      "projections": {
+        "start": 322,
+        "end": 390,
+        "keywords": [
+          "DOL",
+          "Draw on Liquidity",
+          "SD",
+          "Standard Deviation",
+          "Protractor",
+          "LRLR",
+          "HRLR",
+          "CBDR Projections"
+        ]
+      },
+      "trading_models": {
+        "start": 392,
+        "end": 510,
+        "keywords": [
+          "AMD",
+          "PO3",
+          "Silver Bullet",
+          "Judas Swing",
+          "Turtle Soup",
+          "Model 2022",
+          "Sniper",
+          "Grail",
+          "Unicorn",
+          "MMXM",
+          "AMD Weekly"
+        ],
+        "youtube_references": [
+          "https://www.youtube.com/watch?v=9_H8_b_0iS8",
+          "https://www.youtube.com/watch?v=QuI929vXIdI"
+        ]
+      },
+      "market_structure": {
+        "start": 512,
+        "end": 582,
+        "keywords": [
+          "BOS",
+          "CHoCH",
+          "MSS",
+          "SMS",
+          "SFP",
+          "Displacement",
+          "Liquidity Pools",
+          "State of Delivery"
+        ]
+      },
+      "smt_divergence": {
+        "start": 584,
+        "end": 660,
+        "keywords": [
+          "SMT",
+          "DXY",
+          "Yields",
+          "Inter-market",
+          "SMT Crypto",
+          "BTC ETH",
+          "Tolerance temporelle"
+        ]
+      },
+      "mmxm_advanced": {
+        "start": 662,
+        "end": 690,
+        "keywords": [
+          "Original Consolidation",
+          "Re-accumulation",
+          "ROFPD"
+        ]
+      },
+      "cot_seasonality": {
+        "start": 692,
+        "end": 760,
+        "keywords": [
+          "COT",
+          "Non-Commercial",
+          "Seasonal Tendencies",
+          "Yearly Seasonality",
+          "Q1 Q2 Q3 Q4",
+          "CFTC"
+        ]
+      },
+      "risk_management": {
+        "start": 762,
+        "end": 810,
+        "keywords": [
+          "Stop Loss",
+          "Position Sizing",
+          "Partial Profits",
+          "1 percent risk",
+          "5 percent max"
+        ]
+      },
+      "survival_rules": {
+        "start": 812,
+        "end": 840,
+        "keywords": [
+          "No Trade",
+          "FOMC",
+          "NFP"
+        ]
+      },
+      "checklist": {
+        "start": 842,
+        "end": 920,
+        "keywords": [
+          "Scoring",
+          "Checklist",
+          "Protocol",
+          "8 etapes"
+        ]
+      },
+      "concepts_2024": {
+        "start": 940,
+        "end": 1040,
+        "keywords": [
+          "Smooth",
+          "Jagged",
+          "ORG",
+          "Time-based",
+          "Narrative",
+          "Overlap"
+        ]
+      },
+      "liquidity_advanced": {
+        "start": 1042,
+        "end": 1060,
+        "keywords": [
+          "IRL",
+          "ERL",
+          "BPR",
+          "Balanced Price Range",
+          "Volume Imbalance"
+        ]
+      },
+      "news_logic": {
+        "start": 1062,
+        "end": 1075,
+        "keywords": [
+          "News",
+          "CPI",
+          "NFP",
+          "FOMC",
+          "Expansion",
+          "3 Phases News"
+        ],
+        "youtube_references": [
+          "https://www.youtube.com/watch?v=F07X6u2B1is"
+        ]
+      },
+      "audit_sources": {
+        "start": 1077,
+        "end": 1095,
+        "keywords": [
+          "YouTube",
+          "Mentorship",
+          "Reddit",
+          "Twitter",
+          "Sources"
+        ]
+      },
+      "erreurs_communes": {
+        "start": 1097,
+        "end": 1200,
+        "keywords": [
+          "Erreurs",
+          "Cas Echecs",
+          "Anti-erreurs",
+          "Lundi Trap",
+          "Wrong Context",
+          "Checklist 10 points"
+        ]
+      }
+    }
+  },
+  "trading_profiles": {
+    "file": "ict_trading_profiles.md",
+    "version": "2.1",
+    "note": "TF Day Trade et Scalp corrigés selon Mentorship 2022/2023",
+    "sections": {
+      "long_terme": {
+        "htf": "Monthly",
+        "ltf": "Weekly",
+        "keywords": [
+          "Position Trading",
+          "COT",
+          "Monthly"
+        ]
+      },
+      "swing": {
+        "htf": "Daily",
+        "mtf": "H4",
+        "ltf": "H2",
+        "keywords": [
+          "Swing Trading",
+          "AMD Weekly",
+          "H2"
+        ]
+      },
+      "day_trade": {
+        "htf": "H1",
+        "mtf": "M15",
+        "ltf": "M5",
+        "note": "CORRIGE v2.1 : exécution sur M5 (pas M15)",
+        "keywords": [
+          "Day Trading",
+          "M5 Entry",
+          "Silver Bullet"
+        ]
+      },
+      "scalp": {
+        "htf": "M15",
+        "mtf": "M5",
+        "ltf": "M1",
+        "ultra": "30s/15s",
+        "note": "CORRIGE v2.1 : M15 comme HTF, M1 exécution, 30s/15s ultra-précision",
+        "keywords": [
+          "Scalp",
+          "M1",
+          "Sniper",
+          "30 secondes"
+        ]
+      }
+    }
+  },
+  "strategy_triggers": {
+    "file": "ict_strategy_triggers.md",
+    "version": "2.1",
+    "sections": {
+      "triggers": {
+        "keywords": [
+          "Time",
+          "Window",
+          "NY AM",
+          "London",
+          "Sentinel",
+          "CBDR Explosive"
+        ]
+      },
+      "logic": {
+        "keywords": [
+          "Conditions",
+          "Trigger",
+          "Execution",
+          "Grail Setup",
+          "Anti-Inducement"
+        ]
+      },
+      "strategies": {
+        "models": [
+          "Silver Bullet",
+          "Judas Swing",
+          "Turtle Soup",
+          "Unicorn",
+          "Grail",
+          "AMD",
+          "CBDR Explosive"
+        ],
+        "scoring_verdicts": {
+          "a_plus": ">=80",
+          "watch": "65-79",
+          "forbidden": "<=64"
+        }
+      }
+    }
+  },
+  "detection_rules": {
+    "file": "ict_detection_rules.md",
+    "version": "4.0",
+    "note": "OB multi-bougie corrigé, BPR timing, CBDR/Flout, AMD Weekly, SMT Crypto, State of Delivery",
+    "sections": {
+      "fvg_rules": {
+        "keywords": [
+          "Detection",
+          "FVG",
+          "IFVG",
+          "Gap",
+          "High Probability FVG",
+          "Running Out of Fuel"
+        ]
+      },
+      "ob_rules": {
+        "keywords": [
+          "Order Block",
+          "OB",
+          "Breaker",
+          "Multi-bougie institutionnel",
+          "Boucle iteration"
+        ]
+      },
+      "structure_rules": {
+        "keywords": [
+          "Structure",
+          "BOS",
+          "CHoCH",
+          "MSS",
+          "SFP",
+          "Swing",
+          "State of Delivery"
+        ]
+      },
+      "anti_inducement": {
+        "keywords": [
+          "Boolean_Sweep_ERL",
+          "Anti-Inducement",
+          "ERL",
+          "External Range Liquidity"
+        ]
+      },
+      "cbdr_flout": {
+        "keywords": [
+          "CBDR",
+          "Flout",
+          "40 pips",
+          "Explosive",
+          "Central Bank Dealers Range"
+        ]
+      },
+      "displacement_rules": {
+        "keywords": [
+          "Displacement",
+          "Body size",
+          "Visual",
+          "ATR optionnel"
+        ]
+      },
+      "p_d_rules": {
+        "keywords": [
+          "Premium",
+          "Discount",
+          "Equilibrium",
+          "50 percent"
+        ]
+      },
+      "ote_rules": {
+        "keywords": [
+          "OTE",
+          "Fibonacci",
+          "Optimal",
+          "62",
+          "70.5",
+          "79"
+        ]
+      },
+      "smt_rules": {
+        "keywords": [
+          "SMT",
+          "DXY",
+          "Divergence",
+          "Crypto",
+          "BTC ETH",
+          "Tolerance 3 bougies"
+        ]
+      },
+      "time_rules": {
+        "keywords": [
+          "Killzone",
+          "Macro",
+          "Silver Bullet",
+          "12 Macros canoniques",
+          "Timezone EST EDT"
+        ]
+      },
+      "liquidity_rules": {
+        "keywords": [
+          "EQH",
+          "EQL",
+          "Smooth",
+          "Jagged",
+          "Sweep",
+          "IRL ERL alternance"
+        ]
+      },
+      "bias_rules": {
+        "keywords": [
+          "Bias",
+          "Midnight",
+          "NDOG",
+          "NWOG",
+          "State of Delivery"
+        ]
+      },
+      "projection_rules": {
+        "keywords": [
+          "SD",
+          "Projection",
+          "Target",
+          "CBDR projection",
+          "-2.0",
+          "-2.5"
+        ]
+      },
+      "scoring_rules": {
+        "keywords": [
+          "Scoring",
+          "Points",
+          "Confidence",
+          "80 threshold",
+          "COT bonus 5pts"
+        ]
+      },
+      "po3_rules": {
+        "keywords": [
+          "AMD",
+          "PO3",
+          "Accumulation",
+          "Manipulation",
+          "Distribution",
+          "Weekly AMD"
+        ]
+      },
+      "bpr_rules": {
+        "keywords": [
+          "BPR",
+          "Balanced Price Range",
+          "Overlap",
+          "20 bougies timing"
+        ]
+      },
+      "vi_rules": {
+        "keywords": [
+          "VI",
+          "Volume Imbalance",
+          "Gap corps"
+        ]
+      },
+      "risk_rules": {
+        "keywords": [
+          "Stop Loss",
+          "Position Sizing",
+          "1 percent",
+          "5 percent",
+          "Killswitch 3 percent",
+          "3 pertes reduction"
+        ]
+      }
+    }
+  }
+}
