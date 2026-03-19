@@ -20,6 +20,7 @@ import logging
 import numpy as np
 from datetime import datetime, timezone
 from datastore.data_store import DataStore
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -33,13 +34,14 @@ SWING_LOOKBACK_H4  = 20   # bougies H4
 SWING_LOOKBACK_H1  = 30   # bougies H1
 
 
-class OTEDetector:
+class OTEDetector(DetectorMixin):
     """
     Détecte la zone OTE ICT (62-79% Fibonacci) sur H4 et H1.
     Produit un OTE_RESULT consommé par kb5_engine et scoring_engine.
     """
 
-    def __init__(self, datastore: DataStore):
+    def __init__(self, datastore: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds = datastore
         logger.info("OTEDetector initialisé — zone 62-79% Fibo prêt")
 

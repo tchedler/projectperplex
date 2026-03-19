@@ -53,6 +53,7 @@ import MetaTrader5 as mt5
 
 from config.constants import Trading, Gateway, Risk, CB, KS, Score
 from execution.news_manager import NewsManager
+from supervisor.supervisor_mixin import SupervisorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -86,7 +87,7 @@ SESSIONS = {
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class Supervisor:
+class Supervisor(SupervisorMixin):
     """
     Orchestrateur central de SENTINEL PRO KB5.
     Lance et coordonne tous les modules du bot.
@@ -123,7 +124,11 @@ class Supervisor:
                  behaviour_shield,
                  order_manager,
                  # Config
-                 active_pairs: list = None):
+                 active_pairs: list = None,
+                 settings_integration=None,
+                 settings_manager=None):
+        # Initialize SupervisorMixin with both settings_manager and settings_integration
+        super().__init__(settings_manager=settings_manager, settings_integration=settings_integration)
 
         # ── Modules Phase 1 ─────────────────────────────────
         self._ds        = data_store
@@ -235,6 +240,9 @@ class Supervisor:
 
             # ── Threads périodiques ──────────────────────────
             self._start_background_threads()
+
+            # ── Settings reload cycle ────────────────────────
+            self.start_settings_reload_cycle()
 
             # ── Boucle principale ────────────────────────────
             self._running = True
@@ -852,6 +860,9 @@ class Supervisor:
         # ── Stopper les boucles ──────────────────────────────
         self._shutdown_event.set()
         self._running = False
+
+        # ── Stop settings reload cycle ───────────────────────
+        self.stop_settings_reload_cycle()
 
         # ── Stopper le NewsManager ───────────────────────────
         try:

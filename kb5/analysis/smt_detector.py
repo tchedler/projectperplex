@@ -44,6 +44,7 @@ from typing import Optional
 
 from datastore.data_store import DataStore
 from config.constants import Trading
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -86,14 +87,15 @@ SMT_STRONG_THRESHOLD= 1.0  # divergence ≥ 100% ATR → STRONG
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class SMTDetector:
+class SMTDetector(DetectorMixin):
     """
     Détecte les SMT Divergences entre paires corrélées.
     Chaque signal SMT identifie une manipulation institutionnelle
     et prédit la direction probable du mouvement réel.
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self, data_store: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._lock = threading.RLock()
         self._cache: dict[str, list] = {}
@@ -115,6 +117,9 @@ class SMTDetector:
         Returns:
             liste de dicts SMT signal
         """
+        if not self.is_active():
+            return []
+        
         all_signals = []
 
         # Trouver toutes les paires corrélées à `pair`

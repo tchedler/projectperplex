@@ -37,6 +37,7 @@ import pandas as pd
 from datetime import datetime, timezone
 from typing import Optional
 
+from analysis.detector_mixin import DetectorMixin
 from datastore.data_store import DataStore
 
 logger = logging.getLogger(__name__)
@@ -61,7 +62,7 @@ CHOCH_TIMEFRAMES       = ["H1", "M15"]
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class CHoCHDetector:
+class CHoCHDetector(DetectorMixin):
     """
     Détecteur de Change of Character pour Sentinel Pro KB5.
 
@@ -75,7 +76,8 @@ class CHoCHDetector:
       dans la nouvelle direction.
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self, data_store: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._lock = threading.RLock()
         self._cache: dict[str, dict] = {}
@@ -95,6 +97,9 @@ class CHoCHDetector:
         Returns:
             dict {bullish_choch, bearish_choch, dominant, timeframes}
         """
+        if not self.is_active():
+            return {}
+        
         results_per_tf = {}
 
         for tf in CHOCH_TIMEFRAMES:

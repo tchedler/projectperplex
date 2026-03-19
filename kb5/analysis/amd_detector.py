@@ -35,6 +35,7 @@ from typing import Optional
 
 from datastore.data_store import DataStore
 from config.constants import PAIR_MARKET_TYPE, MarketType
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -83,7 +84,7 @@ CONFLUENCE_AMD_SETUP    = 10   # On est en fin de Manipulation -> setup imminent
 # CLASSE PRINCIPALE
 # ==============================================================
 
-class AMDDetector:
+class AMDDetector(DetectorMixin):
     """
     Detecteur du cycle ICT Power of 3 (AMD).
 
@@ -102,7 +103,9 @@ class AMDDetector:
     def __init__(self,
                  data_store: DataStore,
                  bias_detector=None,
-                 liquidity_detector=None):
+                 liquidity_detector=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._bias = bias_detector           # BiasDetector pour le biais HTF
         self._liq  = liquidity_detector      # LiquidityDetector pour Asia Range + Sweeps
@@ -123,8 +126,11 @@ class AMDDetector:
             tf:   Timeframe d'analyse ("H1" par defaut, "H4" ou "D1" possibles)
 
         Returns:
-            dict {phase, profile, accum_range, manip, distrib, confidence}
-        """
+            dict {phase, profile, accum_range, manip, distrib, confidence}        """
+        if not self.is_active():
+            return {}
+        
+        # Analyse complete du cycle AMD        """
         df = self._ds.get_candles(pair, tf)
         if df is None or len(df) < LOOKBACK_H1:
             logger.debug(f"AMDDetector - {pair}/{tf} | Donnees insuffisantes")

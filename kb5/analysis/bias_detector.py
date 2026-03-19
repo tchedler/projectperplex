@@ -39,6 +39,7 @@ import pandas as pd
 from datetime import datetime, timezone
 from typing import Optional
 
+from analysis.detector_mixin import DetectorMixin
 from datastore.data_store import DataStore
 from config.constants import Trading
 
@@ -82,7 +83,7 @@ TF_M15     = "M15"
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class BiasDetector:
+class BiasDetector(DetectorMixin):
     """
     Calcule le biais directionnel multi-niveau selon la méthode ICT.
     Produit un BiasResult complet utilisé par KB5Engine pour
@@ -91,7 +92,9 @@ class BiasDetector:
 
     def __init__(self, data_store: DataStore,
                  fvg_detector=None,
-                 ob_detector=None):
+                 ob_detector=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._fvg  = fvg_detector
         self._ob   = ob_detector
@@ -114,6 +117,9 @@ class BiasDetector:
         Returns:
             dict BiasResult complet
         """
+        if not self.is_active():
+            return {}
+        
         now_utc = datetime.now(timezone.utc)
 
         weekly_bias  = self._get_weekly_bias(pair)

@@ -24,6 +24,7 @@ import logging
 import pandas as pd
 from datetime import datetime, timezone
 from datastore.data_store import DataStore
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -32,13 +33,14 @@ CISD_MIN_BODY_RATIO = 0.4   # corps bougie min 40% de la range
 CISD_LOOKBACK       = 10    # bougies à analyser en arrière
 
 
-class CISDDetector:
+class CISDDetector(DetectorMixin):
     """
     Détecte le CISD sur M5 et M1 comme trigger d'entrée précis.
     Consommé par kb5_engine pour la confirmation LTF finale.
     """
 
-    def __init__(self, datastore: DataStore):
+    def __init__(self, datastore: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds = datastore
         logger.info("CISDDetector initialisé — trigger M5/M1 prêt")
 
@@ -62,6 +64,9 @@ class CISDDetector:
                 reason     : str,
             }
         """
+        if not self.is_active():
+            return self._empty_result("CISD détecteur désactivé")
+        
         # M5 d'abord, M1 en fallback
         for tf in ["M5", "M1"]:
             result = self._check_tf(pair, direction, tf)

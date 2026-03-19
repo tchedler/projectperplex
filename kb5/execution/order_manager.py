@@ -46,6 +46,7 @@ from typing import Optional
 import MetaTrader5 as mt5
 
 from datastore.data_store import DataStore
+from execution.execution_mixin import ExecutionMixin
 from config.constants import Trading, Gateway
 
 logger = logging.getLogger(__name__)
@@ -79,7 +80,7 @@ ORDER_TYPE_MAP = {
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class OrderManager:
+class OrderManager(ExecutionMixin):
     """
     Gère l'envoi, la modification et la fermeture des ordres MT5.
     Seul module autorisé à communiquer avec l'API MT5 pour les ordres.
@@ -96,7 +97,9 @@ class OrderManager:
                  mt5_connector=None,
                  order_reader=None,
                  capital_allocator=None,
-                 circuit_breaker=None):
+                 circuit_breaker=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds        = data_store
         self._connector = mt5_connector
         self._reader    = order_reader

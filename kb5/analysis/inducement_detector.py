@@ -42,6 +42,7 @@ from typing import Optional
 
 from datastore.data_store import DataStore
 from config.constants import Trading
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -60,7 +61,7 @@ CONFLUENCE_IDM      = 12    # bonus de score si IDM confirmé
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class InducementDetector:
+class InducementDetector(DetectorMixin):
     """
     Détecte les Inducements (IDM) institutionnels sur H4, H1 et M15.
 
@@ -78,7 +79,9 @@ class InducementDetector:
     def __init__(self, data_store: DataStore,
                  ob_detector=None,
                  fvg_detector=None,
-                 bias_detector=None):
+                 bias_detector=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds    = data_store
         self._ob    = ob_detector
         self._fvg   = fvg_detector
@@ -102,6 +105,9 @@ class InducementDetector:
         Returns:
             dict {tf: [idm_list]}
         """
+        if not self.is_active():
+            return {}
+        
         results: dict[str, list] = {}
 
         # Récupérer le biais directional HTF pour contextualiser

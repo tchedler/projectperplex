@@ -44,6 +44,7 @@ from typing import Optional
 
 from datastore.data_store import DataStore
 from config.constants import Trading
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -81,7 +82,7 @@ SWEEP_USED   = "USED"   # Déjà exploité ou dépassé la fenêtre de fraîcheu
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class LiquidityDetector:
+class LiquidityDetector(DetectorMixin):
     """
     Radar ICT de liquidité pour Sentinel Pro KB5.
 
@@ -97,7 +98,8 @@ class LiquidityDetector:
          car la liquidité est "épuisée" à ce niveau.
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self, data_store: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._lock = threading.RLock()
         # Format : _cache[pair] = {pools, sweeps, dol, midnight_open}
@@ -119,6 +121,9 @@ class LiquidityDetector:
         Returns:
             dict {pools, sweeps, dol, midnight_open, asia_range}
         """
+        if not self.is_active():
+            return {}
+        
         df_h1 = self._ds.get_candles(pair, "H1")
         df_d1 = self._ds.get_candles(pair, "D1")
         df_w1 = self._ds.get_candles(pair, "W")

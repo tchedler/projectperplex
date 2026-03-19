@@ -37,6 +37,7 @@ import pandas as pd
 from datetime import datetime, timezone
 from typing import Optional
 
+from analysis.detector_mixin import DetectorMixin
 from datastore.data_store import DataStore
 
 logger = logging.getLogger(__name__)
@@ -65,7 +66,7 @@ IRL_SWING_LOOKBACK     = 4    # Swings plus "faibles" que MSS (moins de bougies 
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class IRLDetector:
+class IRLDetector(DetectorMixin):
     """
     Détecteur de Internal Range Liquidity pour Sentinel Pro KB5.
 
@@ -79,9 +80,10 @@ class IRLDetector:
       - Niveaux d'OTE pour re-entrer après un retour de prix
     """
 
-    def __init__(self, data_store: DataStore, fvg_detector=None):
+    def __init__(self, data_store: DataStore, fvg_detector=None, settings_integration=None):
         self._ds   = data_store
         self._fvg  = fvg_detector    # FVGDetector optionnel pour les FVG existants
+        self._settings_integration = settings_integration
         self._lock = threading.RLock()
         self._cache: dict[str, dict] = {}
         logger.info("IRLDetector initialisé — Cartographie des liquidités internes")
@@ -101,6 +103,9 @@ class IRLDetector:
         Returns:
             dict {targets, count, best_target, direction}
         """
+        if not self.is_active():
+            return {}
+        
         all_irl_targets = []
 
         for tf in IRL_TIMEFRAMES:

@@ -33,6 +33,7 @@ import pandas as pd
 from datetime import datetime, timezone
 from typing import Optional
 
+from analysis.detector_mixin import DetectorMixin
 from datastore.data_store import DataStore
 from config.constants import PAIR_MARKET_TYPE, MarketType
 
@@ -71,7 +72,7 @@ CONFLUENCE_ENGULFING          = 12   # Bougie Engulfing confirme la direction
 # CLASSE PRINCIPALE
 # ==============================================================
 
-class PADetector:
+class PADetector(DetectorMixin):
     """
     Detecteur de Price Action Pur pour Sentinel Pro KB5.
 
@@ -82,7 +83,8 @@ class PADetector:
       - Les engulfings = "coup de pied" d'absorption institutionnelle
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self, data_store: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._lock = threading.RLock()
         self._cache: dict[str, dict] = {}
@@ -99,6 +101,9 @@ class PADetector:
         Returns:
             dict {round_numbers, engulfing, trendlines, timestamp}
         """
+        if not self.is_active():
+            return {}
+        
         df_h1  = self._ds.get_candles(pair, "H1")
         df_m15 = self._ds.get_candles(pair, "M15")
 

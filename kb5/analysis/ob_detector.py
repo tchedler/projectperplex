@@ -34,6 +34,7 @@ from typing import Optional
 
 from datastore.data_store import DataStore
 from config.constants import Trading
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -65,7 +66,7 @@ MB_LOOKBACK        = 60    # fenêtre de scan Mitigation Blocks
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class OBDetector:
+class OBDetector(DetectorMixin):
     """
     Détecte les Order Blocks ICT, Breaker Blocks, Mitigation Blocks,
     Rejection Blocks et BPR sur tous les timeframes actifs.
@@ -97,7 +98,8 @@ class OBDetector:
         Zone de consolidation premium pour entrée institutionnelle.
     """
 
-    def __init__(self, data_store: DataStore, fvg_detector=None):
+    def __init__(self, data_store: DataStore, fvg_detector=None, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds          = data_store
         self._fvg         = fvg_detector   # optionnel pour BPR
         self._lock        = threading.RLock()
@@ -121,6 +123,9 @@ class OBDetector:
         Returns:
             dict {tf: {ob_list, breaker_list, bpr_list}}
         """
+        if not self.is_active():
+            return {}
+        
         results: dict[str, dict] = {}
 
         for tf in Trading.TIMEFRAMES:

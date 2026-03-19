@@ -23,6 +23,7 @@ Structure :
 import json
 import logging
 import threading
+import os
 from pathlib import Path
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -270,7 +271,8 @@ class SettingsManager:
         self._file   = Path(settings_file)
         self._lock   = threading.RLock()
         self._data   = deepcopy(DEFAULT_SETTINGS)
-        self._load()
+        self._last_ui_sync = 0.0
+        self.reload()
         logger.info(f"SettingsManager initialise — profil: {self._data['profile']}")
 
     # ══════════════════════════════════════════════════
@@ -305,6 +307,27 @@ class SettingsManager:
                 self._data[key] = loaded[key]
             else:
                 self._data[key] = deepcopy(default_val)
+
+    def reload(self) -> None:
+        """Recharge les paramètres en vérifiant d'abord les mises à jour de l'UI."""
+        # 1. Vérifier si bot_config.json (UI) a été modifié
+        # On cherche bot_config.json dans le dossier 'data' relatif au dossier parent de ce fichier
+        bot_cfg_path = Path(__file__).parent.parent / "data" / "bot_config.json"
+        
+        if bot_cfg_path.exists():
+            try:
+                mtime = os.path.getmtime(bot_cfg_path)
+                if mtime > self._last_ui_sync:
+                    with open(bot_cfg_path, "r", encoding="utf-8") as f:
+                        bot_cfg = json.load(f)
+                    self.sync_from_bot_config(bot_cfg)
+                    self._last_ui_sync = mtime
+                    logger.info(f"SettingsManager — synchronisé avec {bot_cfg_path} (mtime: {mtime})")
+            except Exception as e:
+                logger.error(f"SettingsManager — erreur sync UI : {e}")
+
+        # 2. Recharger depuis user_settings.json
+        self._load()
 
     def save(self) -> bool:
         """Sauvegarde les settings sur disque."""
@@ -562,3 +585,76 @@ class SettingsManager:
     def get_available_pairs() -> dict:
         """Retourne les paires disponibles groupées par catégorie."""
         return AVAILABLE_PAIRS
+    # ══════════════════════════════════════════════════
+    # PONT UI → CERVEAU (synchronisation bot_config.json)
+    # ══════════════════════════════════════════════════
+
+    def sync_from_bot_config(self, bot_config: dict) -> None:
+        """
+        Lit bot_config.json (sauvé par l'interface Streamlit)
+        et injecte les valeurs dans user_settings.json (lu par le cerveau).
+        Appelée au démarrage de main.py.
+        """
+        mapping = {
+            "score_execute":          "score_execute",
+            "score_limit":            "score_watch",
+            "risk_pct":               "risk_per_trade",
+            "drawdown_max_pct":       "max_dd_day_pct",
+            "drawdown_max_week_pct":  "max_dd_week_pct",
+            "rr_min":                 "rr_min",
+            "rr_target":              "rr_target",
+            "max_positions":          "max_trades_day",
+            "max_session_trades":     "max_trades_day",
+            "require_killzone":       "require_killzone",
+            "require_erl":            "require_erl",
+            "require_mss":            "require_mss",
+            "require_choch":          "require_choch",
+            "partial_tp":             "use_partial_tp",
+            "llm_provider":           "llm_provider",
+            "llm_api_key":            "llm_api_key",
+        }
+        updates = {}
+
+        # Copie directe des clés avec mapping de noms
+        for ui_key, sm_key in mapping.items():
+            if ui_key in bot_config:
+                updates[sm_key] = bot_config[ui_key]
+
+        # Paires actives (symbols_watched → active_pairs)
+        if "symbols_watched" in bot_config:
+            updates["active_pairs"] = bot_config["symbols_watched"]
+
+        # Mode opération (PAPER / SEMI_AUTO / FULL_AUTO)
+        if "op_mode" in bot_config:
+            updates["op_mode"] = bot_config["op_mode"]
+
+        # Sessions actives
+        if "sessions_actives" in bot_config:
+            updates["sessions_actives"] = bot_config["sessions_actives"]
+
+        # KillSwitches désactivés
+        if "disabled_ks" in bot_config:
+            updates["disabled_ks"] = bot_config["disabled_ks"]
+
+        # Behaviour Shield (dict de flags)
+        if "behaviour_shield" in bot_config:
+            updates["behaviour_shield"] = bot_config["behaviour_shield"]
+
+        # Filtres temporels
+        if "time_filters" in bot_config:
+            updates["time_filters"] = bot_config["time_filters"]
+
+        # active_concepts (liste plate) → principles_enabled (dict hiérarchique)
+        if "active_concepts" in bot_config:
+            concepts = bot_config["active_concepts"]
+            principles = deepcopy(self.get("principles_enabled", {}))
+            for k in principles:
+                short_key = k.split(":")[-1]
+                principles[k] = short_key in concepts
+            updates["principles_enabled"] = principles
+
+        self.update_bulk(updates)
+        logger.info(
+            f"[SYNC UI→BOT] {len(updates)} paramètres synchronisés "
+            f"depuis bot_config.json vers user_settings.json"
+        )

@@ -3,11 +3,13 @@ Sentinel Pro KB5 — Displacement Detector (ICT)
 """
 import logging
 from datastore.data_store import DataStore
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
-class DisplacementDetector:
-    def __init__(self, data_store, fvg_detector, mss_detector):
+class DisplacementDetector(DetectorMixin):
+    def __init__(self, data_store, fvg_detector, mss_detector, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds = data_store
         self._fvg = fvg_detector
         self._mss = mss_detector

@@ -73,12 +73,22 @@ def check_and_install_prerequisites():
         requirements = [line.strip() for line in f if line.strip() and not line.startswith("#")]
 
     missing_packages = []
+    
+    # List of packages to skip import check (known compatibility issues)
+    skip_import_check = {'streamlit', 'google-generativeai', 'nltk'}
+    
     for req in requirements:
         # Extraire le nom du package (avant == ou autre)
         package_name = req.split()[0].split("==")[0].split(">=")[0].split("<=")[0]
+        
+        # Skip import check for problematic packages
+        if package_name in skip_import_check or package_name.replace("-", "_") in skip_import_check:
+            continue
+            
         try:
             importlib.import_module(package_name.replace("-", "_"))
-        except ImportError:
+        except (ImportError, TypeError):
+            # TypeError can occur with Python 3.14 + old protobuf versions
             missing_packages.append(req)
 
     if missing_packages:
@@ -100,6 +110,7 @@ def check_and_install_prerequisites():
 # Config
 from config.constants import Trading, Gateway, Risk, CB, KS, Score, Log
 from config.settings_manager import SettingsManager
+from config.settings_integration import SettingsIntegration, set_global_integration
 
 
 # Phase 1 — Gateway + DataStore
@@ -275,8 +286,14 @@ def build_bot(enable_dashboard: bool = False) -> tuple:
     logger.info("═" * 60)
     logger.info("SENTINEL PRO KB5 — Instanciation des modules")
     logger.info("═" * 60)
+    # ══════════════════════════════════════════════════════════
+    # SYNC UI → CERVEAU : lecture bot_config.json avant tout
+    # ══════════════════════════════════════════════════════════
+    # Synchronisation avec bot_config.json (UI) désormais gérée 
+    # automatiquement par l'instanciation de SettingsManager()
 
     pairs = get_active_pairs()
+
 
     # ══════════════════════════════════════════════════════════
     # PHASE 0 — DATASTORE
@@ -336,86 +353,109 @@ def build_bot(enable_dashboard: bool = False) -> tuple:
     )
 
     # ══════════════════════════════════════════════════════════
+    # PHASE 1.5 — COUCHE D'INTÉGRATION DES PARAMÈTRES
+    # ══════════════════════════════════════════════════════════
+    
+    logger.info("Phase 1.5 — Configuration usager (SettingsIntegration)")
+    
+    # ✅ CRÉATION CENTRALISÉE DES PARAMÈTRES
+    # Ceci permet à TOUS les modules d'accéder aux paramètres utilisateur
+    settings_manager = SettingsManager("user_settings.json")
+    settings_integration = SettingsIntegration(settings_manager)
+    set_global_integration(settings_integration)
+    
+    logger.info(f"✅ SettingsIntegration activée — Profile: {settings_manager.get('profile', 'Custom')}")
+    logger.info(f"✅ Paires actives: {settings_manager.get_active_pairs()}")
+    
+    # ══════════════════════════════════════════════════════════
     # PHASE 2 — CERVEAU KB5
     # ══════════════════════════════════════════════════════════
 
     logger.info("Phase 2 — Cerveau KB5")
 
     # Détecteurs de structures
-    fvg_detector = FVGDetector(data_store=ds)
-    ob_detector  = OBDetector(data_store=ds)
+    # ✅ CHAQUE détecteur reçoit maintenant settings_integration
+    fvg_detector = FVGDetector(data_store=ds, settings_integration=settings_integration)
+    ob_detector  = OBDetector(data_store=ds, settings_integration=settings_integration)
     smt_detector = SMTDetector(
-    data_store = ds,
+        data_store=ds,
+        settings_integration=settings_integration
     )
 
     # BiasDetector
     bias_detector = BiasDetector(
-        data_store   = ds,
-        fvg_detector = fvg_detector,
-        ob_detector  = ob_detector,
+        data_store=ds,
+        fvg_detector=fvg_detector,
+        ob_detector=ob_detector,
+        settings_integration=settings_integration
     )
 
     # LiquidityDetector — Radar de liquidité ICT (Sweeps, DOL, Aimants)
     # DOIT être instancié AVANT KB5Engine
-    liquidity_detector = LiquidityDetector(data_store=ds)
+    liquidity_detector = LiquidityDetector(data_store=ds, settings_integration=settings_integration)
 
     # AMDDetector — Power of 3 / Cycles ICT (AMD Fractal)
     # DOIT être instancié APRES LiquidityDetector (partage Asia Range)
     amd_detector = AMDDetector(
-        data_store          = ds,
-        bias_detector       = bias_detector,
-        liquidity_detector  = liquidity_detector,
+        data_store=ds,
+        bias_detector=bias_detector,
+        liquidity_detector=liquidity_detector,
+        settings_integration=settings_integration
     )
 
     # PADetector -- Price Action pur (Rounds, Trendlines, Engulfing)
-    pa_detector = PADetector(data_store=ds)
+    pa_detector = PADetector(data_store=ds, settings_integration=settings_integration)
 
     # MSSDetector — Market Structure Shift (cassures avec momentum institutionnel)
-    mss_detector = MSSDetector(data_store=ds)
+    mss_detector = MSSDetector(data_store=ds, settings_integration=settings_integration)
 
     # CHoCHDetector — Change of Character (premiers signes de retournement LTF)
-    choch_detector = CHoCHDetector(data_store=ds)
+    choch_detector = CHoCHDetector(data_store=ds, settings_integration=settings_integration)
 
     # IRLDetector — Internal Range Liquidity (cibles TP intermédiaires précises)
-    irl_detector = IRLDetector(data_store=ds, fvg_detector=fvg_detector)
+    irl_detector = IRLDetector(data_store=ds, fvg_detector=fvg_detector, settings_integration=settings_integration)
 
     # KB5Engine -- pyramide 6 niveaux
     kb5_engine = KB5Engine(
-        data_store           = ds,
-        fvg_detector         = fvg_detector,
-        ob_detector          = ob_detector,
-        smt_detector         = smt_detector,
-        bias_detector        = bias_detector,
-        liquidity_detector   = liquidity_detector,
-        amd_detector         = amd_detector,
-        pa_detector          = pa_detector,
-        mss_detector         = mss_detector,
-        choch_detector       = choch_detector,
-        irl_detector         = irl_detector,
+        data_store=ds,
+        fvg_detector=fvg_detector,
+        ob_detector=ob_detector,
+        smt_detector=smt_detector,
+        bias_detector=bias_detector,
+        liquidity_detector=liquidity_detector,
+        amd_detector=amd_detector,
+        pa_detector=pa_detector,
+        mss_detector=mss_detector,
+        choch_detector=choch_detector,
+        irl_detector=irl_detector,
+        settings_integration=settings_integration
     )
 
     # CircuitBreaker (avant KS + Scoring)
     circuit_breaker = CircuitBreaker(
-        data_store    = ds,
-        order_reader  = order_reader,
-        mt5_connector = connector,
+        data_store=ds,
+        order_reader=order_reader,
+        mt5_connector=connector,
+        settings_integration=settings_integration
     )
 
     # KillSwitchEngine
     killswitch_engine = KillSwitchEngine(
-        data_store   = ds,
-        tick_receiver= tick_receiver,
-        order_reader = order_reader,
-        bias_detector= bias_detector,
+        data_store=ds,
+        tick_receiver=tick_receiver,
+        order_reader=order_reader,
+        bias_detector=bias_detector,
+        settings_integration=settings_integration
     )
 
     # ScoringEngine
     scoring_engine = ScoringEngine(
-        data_store       = ds,
-        kb5_engine       = kb5_engine,
-        killswitch_engine= killswitch_engine,
-        circuit_breaker  = circuit_breaker,
-        bias_detector    = bias_detector,
+        data_store=ds,
+        kb5_engine=kb5_engine,
+        killswitch_engine=killswitch_engine,
+        circuit_breaker=circuit_breaker,
+        bias_detector=bias_detector,
+        settings_integration=settings_integration
     )
 
     # ══════════════════════════════════════════════════════════
@@ -426,27 +466,30 @@ def build_bot(enable_dashboard: bool = False) -> tuple:
 
     # CapitalAllocator
     capital_allocator = CapitalAllocator(
-        data_store      = ds,
-        mt5_connector   = connector,
-        circuit_breaker = circuit_breaker,
+        data_store=ds,
+        mt5_connector=connector,
+        circuit_breaker=circuit_breaker,
+        settings_integration=settings_integration
     )
 
     # BehaviourShield
     behaviour_shield = BehaviourShield(
-        data_store   = ds,
-        fvg_detector = fvg_detector,
-        ob_detector  = ob_detector,
-        bias_detector= bias_detector,
-        order_reader = order_reader,
+        data_store=ds,
+        fvg_detector=fvg_detector,
+        ob_detector=ob_detector,
+        bias_detector=bias_detector,
+        order_reader=order_reader,
+        settings_integration=settings_integration
     )
 
     # OrderManager
     order_manager = OrderManager(
-        data_store      = ds,
-        mt5_connector   = connector,
-        order_reader    = order_reader,
-        capital_allocator= capital_allocator,
-        circuit_breaker = circuit_breaker,
+        data_store=ds,
+        mt5_connector=connector,
+        order_reader=order_reader,
+        capital_allocator=capital_allocator,
+        circuit_breaker=circuit_breaker,
+        settings_integration=settings_integration
     )
 
     # ══════════════════════════════════════════════════════════
@@ -457,27 +500,29 @@ def build_bot(enable_dashboard: bool = False) -> tuple:
 
     supervisor = Supervisor(
         # Phase 1
-        data_store        = ds,
-        mt5_connector     = connector,
-        tick_receiver     = tick_receiver,
-        candle_fetcher    = candle_fetcher,
-        order_reader      = order_reader,
-        reconnect_manager = reconnect_manager,
+        data_store=ds,
+        mt5_connector=connector,
+        tick_receiver=tick_receiver,
+        candle_fetcher=candle_fetcher,
+        order_reader=order_reader,
+        reconnect_manager=reconnect_manager,
         # Phase 2
-        fvg_detector      = fvg_detector,
-        ob_detector       = ob_detector,
-        smt_detector      = smt_detector,
-        bias_detector     = bias_detector,
-        kb5_engine        = kb5_engine,
-        killswitch_engine = killswitch_engine,
-        circuit_breaker   = circuit_breaker,
-        scoring_engine    = scoring_engine,
+        fvg_detector=fvg_detector,
+        ob_detector=ob_detector,
+        smt_detector=smt_detector,
+        bias_detector=bias_detector,
+        kb5_engine=kb5_engine,
+        killswitch_engine=killswitch_engine,
+        circuit_breaker=circuit_breaker,
+        scoring_engine=scoring_engine,
         # Phase 3
-        capital_allocator = capital_allocator,
-        behaviour_shield  = behaviour_shield,
+        capital_allocator=capital_allocator,
+        behaviour_shield=behaviour_shield,
         order_manager     = order_manager,
         # Config
         active_pairs      = pairs,
+        settings_integration=settings_integration,
+        settings_manager=settings_manager,
     )
 
     # ══════════════════════════════════════════════════════════

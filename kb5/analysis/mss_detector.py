@@ -34,6 +34,7 @@ import pandas as pd
 from datetime import datetime, timezone
 from typing import Optional
 
+from analysis.detector_mixin import DetectorMixin
 from datastore.data_store import DataStore
 
 logger = logging.getLogger(__name__)
@@ -62,7 +63,7 @@ MSS_TIMEFRAMES         = ["H4", "H1", "M15"]
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class MSSDetector:
+class MSSDetector(DetectorMixin):
     """
     Détecteur de Market Structure Shift pour Sentinel Pro KB5.
 
@@ -75,7 +76,8 @@ class MSSDetector:
       "La structure haussière est-elle officiellement invalidée ?"
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self, data_store: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._lock = threading.RLock()
         self._cache: dict[str, dict] = {}
@@ -95,6 +97,9 @@ class MSSDetector:
         Returns:
             dict {bullish_mss, bearish_mss, dominant_mss, timeframes}
         """
+        if not self.is_active():
+            return {}
+        
         results_per_tf = {}
 
         for tf in MSS_TIMEFRAMES:

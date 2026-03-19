@@ -49,6 +49,7 @@ from datetime import datetime, timezone, date
 from typing import Optional
 
 from datastore.data_store import DataStore
+from analysis.engine_mixin import EngineMixin
 from config.constants import Risk
 
 logger = logging.getLogger(__name__)
@@ -105,7 +106,7 @@ CHECK_INTERVAL_SEC        = 10
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class CircuitBreaker:
+class CircuitBreaker(EngineMixin):
     """
     Surveille le drawdown et les pertes consécutives en temps réel.
     Escalade automatiquement le niveau CB 0→3 et déclenche
@@ -118,7 +119,9 @@ class CircuitBreaker:
     def __init__(self,
                  data_store: DataStore,
                  order_reader=None,
-                 mt5_connector=None):
+                 mt5_connector=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds        = data_store
         self._orders    = order_reader
         self._connector = mt5_connector

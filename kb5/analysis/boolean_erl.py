@@ -16,6 +16,7 @@ ERL = niveau de liquidité externe non encore sweepé :
 import logging
 from datetime import datetime, timezone
 from datastore.data_store import DataStore
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -24,13 +25,14 @@ ERL_GATE_CAP   = 44
 ERL_SWEEP_PIPS = 0.0002  # distance minimale pour confirmer un sweep (2 pips)
 
 
-class BooleanERL:
+class BooleanERL(DetectorMixin):
     """
     Gate §0 — Vérifie si un ERL a été purgé dans la direction du trade.
     Consommé par scoring_engine AVANT tout calcul de score final.
     """
 
-    def __init__(self, datastore: DataStore, liquidity_detector=None):
+    def __init__(self, datastore: DataStore, liquidity_detector=None, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds  = datastore
         self._liq = liquidity_detector
         logger.info("BooleanERL initialisé — Gate §0 prêt")
@@ -52,6 +54,9 @@ class BooleanERL:
                 reason     : str     # explication lisible
             }
         """
+        if not self.is_active():
+            return self._result(True, 0.0, "UNKNOWN", "ERL gate désactivé — trade autorisé")
+        
         try:
             swept, erl_level, erl_type = self._detect_sweep(pair, direction)
         except Exception as e:

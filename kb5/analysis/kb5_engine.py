@@ -50,6 +50,7 @@ from config.constants import (
     MACROS, MACROS_PRIORITY_HIGH, MACROS_PRIORITY_MEDIUM,
     CBDR_START_H, CBDR_END_H, CBDR_EXPLOSIVE_PIPS,
 )
+from analysis.engine_mixin import EngineMixin
 from analysis.inducement_detector import CONFLUENCE_IDM
 from analysis.cot_seasonality    import CONFLUENCE_COT_ALIGNED
 
@@ -107,7 +108,7 @@ TP_MIN_RR             = 0.5  # RR minimum acceptable
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class KB5Engine:
+class KB5Engine(EngineMixin):
     """
     Moteur central du bot SENTINEL PRO KB5.
     Orchestre la pyramide d'analyse 6 niveaux et produit
@@ -136,7 +137,8 @@ class KB5Engine:
                  choch_detector=None,
                  irl_detector=None,
                  inducement_detector=None,
-                 cot_seasonality=None):
+                 cot_seasonality=None,
+                 settings_integration=None):
         self._ds    = data_store
         self._fvg   = fvg_detector
         self._ob    = ob_detector
@@ -150,6 +152,7 @@ class KB5Engine:
         self._irl   = irl_detector         # IRLDetector — cibles TP internes (optionnel)
         self._idm   = inducement_detector  # InducementDetector — IDM / Stop Hunt (optionnel)
         self._cot   = cot_seasonality      # COTSeasonality — biais macro institutionnel (optionnel)
+        self._settings_integration = settings_integration
         self._lock  = threading.Lock()
         self._cache: dict[str, dict] = {}
         logger.info("KB5Engine initialisé — Pyramide 6 niveaux + MSS/CHoCH/IRL/IDM/COT prête")

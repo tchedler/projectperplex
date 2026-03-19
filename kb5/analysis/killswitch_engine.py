@@ -43,6 +43,7 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 from datastore.data_store import DataStore
+from analysis.engine_mixin import EngineMixin
 from config.constants import Trading, Risk, Gateway
 from config.settings_manager import SettingsManager
 
@@ -128,7 +129,7 @@ KS_WARNING   = {4, 8}
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class KillSwitchEngine:
+class KillSwitchEngine(EngineMixin):
     """
     Évalue les 9 KillSwitches de sécurité KB5 avant chaque trade.
     Un seul KS BLOQUANT suffit à annuler un setup quelle que soit
@@ -143,12 +144,12 @@ class KillSwitchEngine:
                  tick_receiver=None,
                  order_reader=None,
                  bias_detector=None,
-                 settings_manager: SettingsManager = None):
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds       = data_store
         self._ticks    = tick_receiver
         self._orders   = order_reader
         self._bias     = bias_detector
-        self._settings = settings_manager or SettingsManager()
         self._lock     = threading.Lock()
 
         # Cache news (liste de datetime UTC)
@@ -197,7 +198,10 @@ class KillSwitchEngine:
 
         # ── Lire les KS désactivés par l'utilisateur ─────────
         # La clé dans settings est "disabled_ks" = liste de strings ex ["KS4", "KS9"]
-        disabled_ks = set(self._settings.get("disabled_ks", []))
+        if self._settings_integration:
+            disabled_ks = set(self._settings_integration.get_disabled_killswitches())
+        else:
+            disabled_ks = set()
         if disabled_ks:
             logger.debug(f"KS désactivés par l'utilisateur : {disabled_ks}")
 

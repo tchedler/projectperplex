@@ -46,6 +46,7 @@ import math
 from typing import Optional
 
 from datastore.data_store import DataStore
+from execution.execution_mixin import ExecutionMixin
 from config.constants import Risk, Trading
 
 logger = logging.getLogger(__name__)
@@ -180,7 +181,7 @@ TEST_LOT_MAX      = 0.10   # Lot maximum en test (sécurité démo)
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class CapitalAllocator:
+class CapitalAllocator(ExecutionMixin):
     """
     Calcule la taille de position optimale selon le risque ATR.
     Produit un AllocationResult complet pour order_manager.
@@ -193,7 +194,9 @@ class CapitalAllocator:
     def __init__(self,
                  data_store: DataStore,
                  mt5_connector=None,
-                 circuit_breaker=None):
+                 circuit_breaker=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._mt5  = mt5_connector
         self._cb   = circuit_breaker

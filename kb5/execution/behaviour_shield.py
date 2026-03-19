@@ -40,6 +40,7 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 from datastore.data_store import DataStore
+from execution.execution_mixin import ExecutionMixin
 from config.constants import Trading, Risk
 
 logger = logging.getLogger(__name__)
@@ -83,7 +84,7 @@ BS_WARNING   = set()                        # aucun warning pour l'instant
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class BehaviourShield:
+class BehaviourShield(ExecutionMixin):
     """
     Dernier gardien avant l'envoi d'un ordre à MT5.
     Détecte les pièges de manipulation ICT et les
@@ -98,7 +99,9 @@ class BehaviourShield:
                  fvg_detector=None,
                  ob_detector=None,
                  bias_detector=None,
-                 order_reader=None):
+                 order_reader=None,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds     = data_store
         self._fvg    = fvg_detector
         self._ob     = ob_detector

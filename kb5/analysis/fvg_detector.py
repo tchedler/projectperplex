@@ -31,6 +31,7 @@ from typing import Optional
 
 from datastore.data_store import DataStore
 from config.constants import Trading, Gateway
+from analysis.detector_mixin import DetectorMixin
 
 logger = logging.getLogger(__name__)
 
@@ -53,7 +54,7 @@ LV_LOOKBACK          = 60     # fenêtre de scan
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class FVGDetector:
+class FVGDetector(DetectorMixin):
     """
     Détecte et classe les Fair Value Gaps (FVG) ICT sur tous les
     timeframes actifs. Un FVG est un déséquilibre de prix créé par
@@ -73,7 +74,8 @@ class FVGDetector:
         de rééquilibrage.
     """
 
-    def __init__(self, data_store: DataStore):
+    def __init__(self, data_store: DataStore, settings_integration=None):
+        super().__init__(settings_integration)
         self._ds        = data_store
         self._lock      = threading.RLock()
         self._cache: dict[str, dict[str, list]] = {}
@@ -97,6 +99,9 @@ class FVGDetector:
         Returns:
             dict avec clés = TF, valeurs = liste de FVG dicts
         """
+        if not self.is_active():
+            return {}
+        
         results: dict[str, list] = {}
 
         for tf in Trading.TIMEFRAMES:

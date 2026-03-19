@@ -49,6 +49,7 @@ from datetime import datetime, timezone
 from typing import Optional
 
 from datastore.data_store import DataStore
+from analysis.engine_mixin import EngineMixin
 from analysis.boolean_erl import BooleanERL
 from analysis.scoring_v4 import ScoringV4
 from analysis.ote_detector import OTEDetector
@@ -116,7 +117,7 @@ GRADE_MAP = [
 # CLASSE PRINCIPALE
 # ══════════════════════════════════════════════════════════════
 
-class ScoringEngine:
+class ScoringEngine(EngineMixin):
     """
     Juge final du système SENTINEL PRO KB5.
     Agrège toutes les analyses et produit le SCALP_OUTPUT
@@ -131,7 +132,9 @@ class ScoringEngine:
                  kb5_engine,
                  killswitch_engine,
                  circuit_breaker,
-                 bias_detector):
+                 bias_detector,
+                 settings_integration=None):
+        super().__init__(settings_integration)
         self._ds   = data_store
         self._kb5  = kb5_engine
         self._ks   = killswitch_engine
@@ -256,6 +259,7 @@ class ScoringEngine:
                   if tf_details else "H1"
         trade_type = infer_trade_type(best_tf)
         execute_threshold = get_execute_threshold(trade_type)
+        watch_threshold = self.get_scoring_thresholds()['watch']  # FROM SETTINGS
 
         if override["forced_no_trade"]:
             verdict = "NO_TRADE"
@@ -265,7 +269,7 @@ class ScoringEngine:
             verdict = "EXECUTE"
             reason  = f"Tous filtres validés — {trade_type} (seuil {execute_threshold})"
             grade   = self._get_grade(final_score)
-        elif final_score >= SCORE_WATCH:
+        elif final_score >= watch_threshold:
             verdict = "WATCH"
             reason  = f"Score {final_score} insuffisant pour auto-exécution"
             grade   = self._get_grade(final_score)
@@ -393,12 +397,13 @@ class ScoringEngine:
         entry_model = kb5_result.get("entry_model", {})
         rr = entry_model.get("rr", 0.0)
         rr_valid = entry_model.get("rr_valid", False)
+        rr_minimum = self.get_risk_config()['rr_min']  # FROM SETTINGS
 
-        if not rr_valid or rr < RR_MINIMUM:
+        if not rr_valid or rr < rr_minimum:
             return self._override(
                 "RR_INSUFFICIENT",
-                f"RR {rr:.2f} < minimum {RR_MINIMUM:.1f}",
-                {"rr": rr, "rr_minimum": RR_MINIMUM}
+                f"RR {rr:.2f} < minimum {rr_minimum:.1f}",
+                {"rr": rr, "rr_minimum": rr_minimum}
             )
 
                 # Override 6b : Scalp hors Killzone
