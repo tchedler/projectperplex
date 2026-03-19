@@ -22,6 +22,23 @@ from datetime import datetime
 
 import streamlit as st
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+import MetaTrader5 as mt5
+if mt5.initialize(path=os.getenv("MT5_PATH")):
+    mt5.login(int(os.getenv("MT5_LOGIN")), 
+              password=os.getenv("MT5_PASSWORD"),
+              server=os.getenv("MT5_SERVER"))
+    st.sidebar.success("✅ Exness MT5 Trial15 LIVE")
+else:
+    st.sidebar.warning("⚠️ MT5 Trial15 démo")
+import google.generativeai as genai
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+model = genai.GenerativeModel(os.getenv("GEMINI_MODEL"))
+
+
 logger = logging.getLogger(__name__)
 
 # ── Chemins (pathlib — plus robuste) ────────────────────────
